@@ -1,40 +1,47 @@
+import React from 'react'
 import { CardServices } from './CardServices'
 
 const serviceCardList = [
   {
     id: '1',
     title: 'Web Developer',
-    paragraph: 'blog, e-commerce, landPage, sites  institucionais',
+    paragraph:
+      'Blogs, E-commerce, LandPage, Sites  institucionais, tudo que seu negócio precisar',
     ImageUrl: '/coding.svg',
   },
   {
     id: '2',
     title: 'uI/uX design',
-    paragraph: 'Desing pensado em responsividade ',
+    paragraph:
+      'Desing pensado em responsividade garantindo a melhor usabilidade',
     ImageUrl: '/coding.svg',
   },
   {
     id: '3',
-    title: 'App mobile',
-    paragraph: 'Construção de aplicativos para seu negocio',
+    title: 'Developer mobile',
+    paragraph:
+      'Construção de aplicativos para seu negócio alcançar todos os públicos',
     ImageUrl: '/coding.svg',
   },
   {
     id: '4',
-    title: 'Web Developer',
-    paragraph: 'blog, e-commerce, landPage, sites  institucionais',
+    title: 'Otimização de Desempenho',
+    paragraph:
+      'Implemente técnicas avançadas de otimização de desempenho para garantir que suas plataformas se destaquem',
     ImageUrl: '/coding.svg',
   },
   {
     id: '5',
-    title: 'Web Developer',
-    paragraph: 'blog, e-commerce, landPage, sites  institucionais',
+    title: 'Manutenção e Suporte Contínuos',
+    paragraph:
+      'Serviços abrangentes de manutenção e suporte para garantir que seus sistemas permaneçam operacionais e atualizados',
     ImageUrl: '/coding.svg',
   },
   {
     id: '6',
-    title: 'Web Developer',
-    paragraph: 'blog, e-commerce, landPage, sites  institucionais',
+    title: 'As melhores tecnologias',
+    paragraph:
+      ' Utilizo tecnologias modernas para criar plataformas que não apenas atendem, mas excedem as expectativas dos usuários',
     ImageUrl: '/coding.svg',
   },
 ]

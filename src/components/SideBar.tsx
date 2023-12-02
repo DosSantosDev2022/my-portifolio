@@ -11,11 +11,11 @@ import Link from 'next/link'
 import ModalContact from './Modal'
 
 export function SideBar() {
-  const tags = [
-    { name: 'Idade', value: 27 },
-    { name: 'Residencia', value: 'Br' },
-    { name: 'Adress', value: 'Itupeva-SP' },
-    { name: 'Atividade', value: 'Frelancer' },
+  const links = [
+    { name: 'Home', Url: '/' },
+    { name: 'Sobre mim', Url: '/About' },
+    { name: 'Contato', Url: '/Contact' },
+    { name: 'Projetos', Url: '/Projects' },
   ]
   const socialLinks = [
     { Url: '/', icon: <FaSquareInstagram />, name: 'Instagram' },
@@ -61,15 +61,14 @@ export function SideBar() {
         <div className="bg-slate-950 w-full h-1" />
 
         <div className="flex flex-col gap-2">
-          {tags.map((tag) => (
-            <div key={tag.name} className="flex items-center justify-between">
-              <span className="bg-slate-50 text-slate-900 font-medium p-1 rounded-lg text-sm">
-                {tag.name}
-              </span>
-              <span className="text-slate-500 font-normal text-sm ">
-                {tag.value}{' '}
-              </span>
-            </div>
+          {links.map((link) => (
+            <Link
+              className="bg-slate-50 rounded-md p-1 text-slate-900 font-normal text-sm tracking-wide hover:bg-slate-200 transition-all"
+              key={link.name}
+              href={link.Url}
+            >
+              {link.name}
+            </Link>
           ))}
         </div>
         <div className="bg-slate-950 w-full h-1" />

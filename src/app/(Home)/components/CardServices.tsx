@@ -11,10 +11,10 @@ export function CardServices({ title, ImageUrl, paragraph }: CardServiceTypes) {
     <>
       <div className="w-[310px] h-[225px] bg-slate-50 shadow-sm rounded-md flex items-center">
         <div className="flex flex-col items-center justify-center p-1">
-          <Image src={ImageUrl} alt="" width={80} height={80} quality={100} />
+          <Image src={ImageUrl} alt="" width={100} height={100} quality={100} />
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <h4 className="text-slate-900 font-semibold text-lg">{title}</h4>
-            <span className="text-slate-500 font-normal text-base">
+            <h4 className="text-slate-900 font-extrabold text-lg">{title}</h4>
+            <span className="text-slate-500 font-normal text-sm">
               {paragraph}
             </span>
           </div>
