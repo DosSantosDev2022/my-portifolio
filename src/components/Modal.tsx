@@ -1,9 +1,9 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
-import Button from './Button'
 import { RxCrossCircled } from 'react-icons/rx'
 import { MdEmail } from 'react-icons/md'
+import { Form } from './Form'
 
 export default function ModalContact() {
   return (
@@ -25,25 +25,7 @@ export default function ModalContact() {
                   <RxCrossCircled />
                 </Dialog.Close>
               </header>
-              <form className="flex flex-col gap-4 w-full">
-                <input
-                  className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
-                  type="text"
-                  placeholder="Qual é seu nome"
-                />
-                <input
-                  className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
-                  type="email"
-                  placeholder="Digite seu email"
-                />
-                <textarea
-                  placeholder="Deixe sua mensagem !"
-                  className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
-                />
-                <Button variant="primary" className="hover:bg-slate-950 ">
-                  Enviar
-                </Button>
-              </form>
+              <Form />
             </div>
           </Dialog.Content>
         </Dialog.Portal>
