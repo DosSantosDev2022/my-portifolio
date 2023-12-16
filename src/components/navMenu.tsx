@@ -12,11 +12,11 @@ export function NavMenu() {
 
   return (
     <NavigationMenu.Root>
-      <NavigationMenu.List className="flex flex-col gap-2">
+      <NavigationMenu.List className="flex  gap-6">
         {links.map((link) => (
           <NavigationMenu.Item
             key={link.name}
-            className="rounded-md p-1 text-slate-50 font-normal text-sm tracking-wide hover:scale-105 transition-all cursor-pointer"
+            className="text-slate-50 font-light"
           >
             <Link href={link.Url}>{link.name}</Link>
           </NavigationMenu.Item>

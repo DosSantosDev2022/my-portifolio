@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/components/Header'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.className} lang="pt-br">
-      <body className="scrollbar scrollbar-thumb-slate-900">{children}</body>
+      <body className="scrollbar scrollbar-thumb-slate-900 bg-slate-900">
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
