@@ -20,9 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.className} lang="pt-br">
-      <body className="scrollbar scrollbar-thumb-slate-900 bg-slate-900">
+      <body className="scrollbar scrollbar-thumb-slate-900 bg-zinc-900">
         <Header />
-        {children}
+        <main className="lg:px-16 px-8">{children}</main>
       </body>
     </html>
   )

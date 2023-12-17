@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-  variant?: 'primary' | 'outlined' | 'danger'
+  variant?: 'primary' | 'outlined' | 'highlight'
 }
 
 export default function Button({
@@ -13,15 +13,14 @@ export default function Button({
 }: ButtonProps) {
   const variantClasses = {
     primary:
-      'bg-slate-900 text-slate-50 hover:bg-slate-950 hover:scale-105 transition-all',
-    outlined: 'bg-transparent border-2 border-white text-slate-900',
-    danger:
-      'text-red-500 border-red-500 border hover:bg-red-600 bg-transparent ',
+      'bg-zinc-50 text-zinc-900 hover:bg-zinc-100 hover:scale-105 transition-all',
+    outlined: 'bg-transparent border border-zinc-50 text-zinc-50',
+    highlight: 'text-zinc-50 hover:bg-violet-900 bg-violet-950 ',
   }
 
   const _className = twMerge(
     variantClasses[variant],
-    'appearance-none rounded-lg p-2 text-md font-bold shadow hover:scale-105 transition-all',
+    'appearance-none rounded-md p-2 text-sm font-bold shadow hover:scale-105 transition-all',
     className,
   )
 
