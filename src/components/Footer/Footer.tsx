@@ -14,6 +14,7 @@ export function FooterPageLayout() {
               recursos e lançamentos.
             </p>
             <FormFooter />
+
             <p className="text-zinc-100 text-xs font-light">
               Ao se inscrever, você concorda com nossa Política de Privacidade e
               consente em receber atualizações de nossa empresa.

@@ -1,3 +1,4 @@
+'use client'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -39,6 +40,7 @@ export function Form() {
       )
       .then(
         (response) => {
+          console.log(response)
           toast.success('Email enviado com sucesso !')
           reset()
         },
@@ -58,10 +60,9 @@ export function Form() {
         className="flex flex-col gap-4 w-full"
       >
         <input
-          className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
           type="text"
-          placeholder="Qual é seu nome"
           {...register('nome')}
+          placeholder="Digite seu nome"
         />
         {errors && (
           <span className="text-red-500 font-normal">
@@ -69,21 +70,16 @@ export function Form() {
           </span>
         )}
         <input
-          className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
-          type="email"
-          placeholder="Digite seu email"
+          type="text"
           {...register('email')}
+          placeholder="Digite seu email"
         />
         {errors && (
           <span className="text-red-500 font-normal">
             {errors.email?.message}
           </span>
         )}
-        <textarea
-          {...register('coments')}
-          placeholder="Deixe sua mensagem !"
-          className="shadow-sm appearance-none border rounded w-full py-2 px-3 text-slate-500 leading-tight focus:outline-slate-300 focus:shadow-outline"
-        />
+        <textarea placeholder="Deixe sua mensagem" {...register('coments')} />
         <Button variant="primary" className="hover:bg-slate-950 ">
           Enviar
         </Button>
