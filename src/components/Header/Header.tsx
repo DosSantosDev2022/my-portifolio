@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import Button from './Button'
-import { NavMenu } from './navMenu'
+import Button from '@/components/Buttons/Button'
+import { NavMenu } from '@/components/Header/navMenu'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 import { useState } from 'react'
 

@@ -4,7 +4,7 @@ import { z } from 'zod'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 
-import Button from './Button'
+import Button from '@/components/Buttons/Button'
 
 const zodSchemaFomr = z.object({
   nome: z.string().nonempty('O nome é obrigatório'),

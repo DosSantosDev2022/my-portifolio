@@ -26,7 +26,7 @@ export function SectionTwo() {
     },
   ]
   return (
-    <section className="py-28 flex items-start gap-20">
+    <section className="py-28 flex flex-col lg:flex-row items-start gap-20">
       <div className="w-full">
         <Image
           className="rounded-md"
