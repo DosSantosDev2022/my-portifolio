@@ -13,7 +13,7 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="flex items-center justify-between w-full  bg-zinc-950 lg:h-[72px] lg:px-16 px-8 border-b-[1px] border-zinc-500 fixed ">
+    <header className="flex items-center justify-between w-full  bg-zinc-950 lg:h-[95px] lg:px-16 px-8 border-b-[1px] border-zinc-500 lg:fixed top-0 left-0 z-[1000] ">
       <div className="flex flex-col lg:flex-row items-center w-full justify-between p-5 lg:p-0">
         <div className="flex items-center gap-28">
           <h1 className="text-slate-50 text-2xl font-bold">DosSantosDev</h1>
