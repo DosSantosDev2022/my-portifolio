@@ -18,10 +18,22 @@ export function FormFooter() {
     resolver: zodResolver(zodSchema),
   })
 
-  const onSubmit: SubmitHandler<FormInput> = (data) => {
-    alert('formulário enviado')
-    console.log(data)
+  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    if (response.ok) {
+      alert('Formulário enviado com sucesso !')
+    } else {
+      alert('Erro ao enviar email')
+    }
   }
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full gap-2">
       <input
