@@ -1,7 +1,7 @@
 import Button from '@/components/Buttons/Button'
 import Image from 'next/image'
 import Link from 'next/link'
-import profile from '@/assets/img/Profile.png'
+import profile from '@/assets/Profile.png'
 
 export function HeaderHomePage() {
   return (

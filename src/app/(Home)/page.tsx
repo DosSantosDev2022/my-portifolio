@@ -1,5 +1,6 @@
 import { HeaderHomePage } from './components/headerHome'
 import { SectionOne } from './components/sectionOne'
+import { SectionStacks } from './components/sectionStacks'
 import { SectionTwo } from './components/sectiontwo'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeaderHomePage />
       <SectionOne />
       <SectionTwo />
+      <SectionStacks />
     </>
   )
 }

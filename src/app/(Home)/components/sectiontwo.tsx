@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import image from '@/assets/img/banner.jpg'
+import image from '@/assets/banner.jpg'
 import { FaLaptopCode } from 'react-icons/fa6'
 import { FaTools } from 'react-icons/fa'
 import { MdOutlineSecurity } from 'react-icons/md'
