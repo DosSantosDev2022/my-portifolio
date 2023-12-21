@@ -1,3 +1,17 @@
+import { HeaderContactPage } from '@/app/About/components/header'
+import { ProfileContactPage } from '@/app/About/components/profile'
+import { SectionTechnology } from '@/app/About/components/technology'
+import { SectionValues } from '@/app/About/components/sectionValues'
+
 export default function AboutPage() {
-  return <h1>Página About</h1>
+  return (
+    <>
+      <>
+        <HeaderContactPage />
+        <ProfileContactPage />
+        <SectionTechnology />
+        <SectionValues />
+      </>
+    </>
+  )
 }
