@@ -45,7 +45,7 @@ export function SectionValues() {
             </i>
             <h5 className="text-zinc-50 font-bold text-xl">{item.title} </h5>
             <p className="text-zinc-100 font-medium text-md text-center">
-              {item.paragraph}{' '}
+              {item.paragraph}
             </p>
           </div>
         ))}
