@@ -6,6 +6,7 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Input } from '../Forms/TextField'
 
 const zodSchema = z.object({
   email: z.string().email('O formato do email é inválido'),
@@ -36,11 +37,10 @@ export function FormFooter() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex w-full gap-2">
-      <input
-        placeholder="Digite seu email"
-        {...register('email')}
+      <Input
         type="email"
-        className='"bg-zinc-200 appearance-none border-2 border-zinc-200 rounded w-full py-2 px-4 text-zinc-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'
+        {...register('email')}
+        placeholder="Digite seu email"
       />
       <Button variant="highlight">Cadastrar</Button>
     </form>
