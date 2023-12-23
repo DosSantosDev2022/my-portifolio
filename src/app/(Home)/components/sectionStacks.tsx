@@ -3,48 +3,56 @@ import { Cards } from './cards'
 export function SectionStacks() {
   const CardList = [
     {
+      id: '1',
       CardTitle: 'React Js',
       CardCover: '/react-original.svg',
       CardDescriptiom:
         'O React JS é uma ferramenta essencial em minhas aplicações web, sendo o alicerce que impulsiona a inovação e a interatividade em cada projeto.',
     },
     {
+      id: '2',
       CardTitle: 'Next Js',
       CardCover: '/nextjs-original.svg',
       CardDescriptiom:
         'O Next.js simplifica o desenvolvimento por meio de sua estrutura intuitiva, oferecendo uma arquitetura pronta para produção que permite a criação rápida e eficiente de aplicações web modernas.',
     },
     {
+      id: '3',
       CardTitle: 'Tailwind Css',
       CardCover: '/tailwindcss-plain.svg',
       CardDescriptiom:
         'O Tailwind CSS é a minha escolha definitiva quando se trata de estilização em meus projetos front-end, oferecendo uma abordagem única e eficiente para o design de interfaces modernas.',
     },
     {
+      id: '4',
       CardTitle: 'Sass',
       CardCover: '/sass-original.svg',
       CardDescriptiom:
         'Com o Sass, desfruto da vantagem da pré-compilação, permitindo-me utilizar recursos avançados como variáveis, aninhamento e mixins. Essa abordagem resulta em um código mais limpo e organizado.',
     },
     {
+      id: '5',
       CardTitle: 'Next Js',
       CardCover: '/nextjs-original.svg',
       CardDescriptiom:
         'O Next.js simplifica o desenvolvimento por meio de sua estrutura intuitiva, oferecendo uma arquitetura pronta para produção que permite a criação rápida e eficiente de aplicações web modernas.',
     },
     {
+      id: '6',
       CardTitle: 'Next Js',
       CardCover: '/nextjs-original.svg',
       CardDescriptiom:
         'O Next.js simplifica o desenvolvimento por meio de sua estrutura intuitiva, oferecendo uma arquitetura pronta para produção que permite a criação rápida e eficiente de aplicações web modernas.',
     },
     {
+      id: '7',
       CardTitle: 'Node Js',
       CardCover: 'nodejs-original.svg',
       CardDescriptiom:
         'Com o Sass, desfruto da vantagem da pré-compilação, permitindo-me utilizar recursos avançados como variáveis, aninhamento e mixins. Essa abordagem resulta em um código mais limpo e organizado.',
     },
     {
+      id: '8',
       CardTitle: 'Sass',
       CardCover: '/sass-original.svg',
       CardDescriptiom:
@@ -66,7 +74,7 @@ export function SectionStacks() {
               CardDescription={card.CardDescriptiom}
               CardTitle={card.CardTitle}
               CoverUrl={card.CardCover}
-              key={card.CardTitle}
+              key={card.id}
             />
           ))}
         </div>

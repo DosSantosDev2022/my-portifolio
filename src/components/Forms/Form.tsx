@@ -2,13 +2,14 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import emailjs from 'emailjs-com'
-import { toast } from 'react-toastify'
 
 import Button from '@/components/Buttons/Button'
+import { Input } from './TextField'
+import { TextArea } from './TextArea'
+import { toast } from 'react-toastify'
 
 const zodSchemaFomr = z.object({
-  nome: z.string().nonempty('O nome é obrigatório'),
+  name: z.string().nonempty('O nome é obrigatório'),
   email: z.string().email('Formato do email inválido'),
   coments: z.string(),
 })
@@ -25,32 +26,8 @@ export function Form() {
     resolver: zodResolver(zodSchemaFomr),
   })
   const onSubmit: SubmitHandler<FormInput> = (data) => {
-    const templateParams = {
-      name: data.nome,
-      message: data.coments,
-      email: data.email,
-    }
-
-    emailjs
-      .send(
-        'service_8s074tc',
-        'template_r8yyiuc',
-        templateParams,
-        'U7coQ2AOuzdMMPPf2',
-      )
-      .then(
-        (response) => {
-          console.log(response)
-          toast.success('Email enviado com sucesso !')
-          reset()
-        },
-        (error) => {
-          console.error('Erro ao enviar e-mail:', error)
-          toast.error(
-            'Erro ao enviar o formulário. Por favor, tente novamente.',
-          )
-        },
-      )
+    toast.success('Formulário enviado com sucesso')
+    reset()
   }
 
   return (
@@ -59,28 +36,34 @@ export function Form() {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-4 w-full"
       >
-        <input
+        <Input
           type="text"
-          {...register('nome')}
+          {...register('name')}
           placeholder="Digite seu nome"
+          label="Digite seu nome completo"
         />
         {errors && (
           <span className="text-red-500 font-normal">
-            {errors.nome?.message}
+            {errors.name?.message}
           </span>
         )}
-        <input
-          type="text"
+        <Input
+          type="email"
           {...register('email')}
           placeholder="Digite seu email"
+          label="Digite seu melhor email"
         />
         {errors && (
           <span className="text-red-500 font-normal">
             {errors.email?.message}
           </span>
         )}
-        <textarea placeholder="Deixe sua mensagem" {...register('coments')} />
-        <Button variant="primary" className="hover:bg-slate-950 ">
+        <TextArea
+          label="Deixe sua mensagem"
+          placeholder="Deixe sua mensagem"
+          {...register('coments')}
+        />
+        <Button variant="highlight" className="hover:bg-violet-800 ">
           Enviar
         </Button>
       </form>

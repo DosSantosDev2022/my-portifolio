@@ -1,18 +1,19 @@
 export function TechsList() {
   const techlist = [
     {
+      id: '1',
       name: 'React Js',
     },
-    { name: 'Next Js' },
-    { name: 'Node Js' },
-    { name: 'Tailwind css' },
-    { name: 'Sass' },
+    { name: 'Next Js', id: '2' },
+    { id: '3', name: 'Node Js' },
+    { id: '4', name: 'Tailwind css' },
+    { id: '5', name: 'Sass' },
   ]
 
   return (
     <div className="w-full p-2 flex flex-wrap items-start justify-center gap-12">
       {techlist.map((item) => (
-        <span className="text-zinc-50 font-bold text-xl" key={item.name}>
+        <span className="text-zinc-50 font-bold text-xl" key={item.id}>
           {item.name}
         </span>
       ))}
