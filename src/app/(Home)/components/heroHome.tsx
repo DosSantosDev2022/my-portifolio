@@ -16,7 +16,7 @@ export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
             {homeInfo.title}
           </h2>
           <div>
-            <RichText content={homeInfo.description.raw} />
+            <RichText fontSize="2xl" content={homeInfo.description.raw} />
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -29,7 +29,7 @@ export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
           ))}
         </div>
       </div>
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-end">
         <Image
           className="w-[450px] rounded-md"
           alt=""

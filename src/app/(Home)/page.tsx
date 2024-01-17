@@ -12,21 +12,53 @@ const GET_PAGE_DATA = async (): Promise<HomePageData> => {
     homepage(where: {slug: "home"}) {
       slug
       title
+      technologies {
+        name
+        iconSvg
+      }
+      socials {
+        name
+        iconSvg
+        id
+        url
+      }
       description {
         raw
       }
       profileImage {
         url
       }
-      technologies {
-        name
-        iconSvg
+      sectionOne {
+        ... on Section {
+          id
+          title
+          content {
+            raw
+          }
+        }
       }
-      socials {
-        id
-        name
-        url
-        iconSvg
+      sectionTwo {
+        card {
+          title
+          id
+          iconSvg
+          content {
+            raw
+          }
+        }
+        figure {
+          url
+        }
+      }
+      sectionStack {
+        title
+        card {
+          title
+          iconSvg
+          content {
+            raw
+          }
+        }
       }
     }
   }
@@ -41,9 +73,9 @@ export default async function Home() {
   return (
     <>
       <HeroHomePage homeInfo={homepage} />
-      <SectionOne />
-      <SectionTwo />
-      <SectionStacks />
+      <SectionOne homeInfo={homepage} />
+      <SectionTwo homeInfo={homepage} />
+      <SectionStacks homeInfo={homepage} />
       <SectionFAQs />
     </>
   )

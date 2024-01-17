@@ -1,36 +1,20 @@
 import Image from 'next/image'
-import image from '@/assets/banner.jpg'
-import { FaLaptopCode } from 'react-icons/fa6'
-import { FaTools } from 'react-icons/fa'
-import { MdOutlineSecurity } from 'react-icons/md'
 
-export function SectionTwo() {
-  const cards = [
-    {
-      title: 'Tecnologias de alta qualidade',
-      paragraph:
-        'As melhores tecnologias do mercado para seu projeto garantindo qualidade na entrega e sucesso para seu negocio',
-      icon: <FaLaptopCode />,
-    },
-    {
-      title: 'Suporte garantido',
-      paragraph:
-        'Garantimos um suporte mesmo após a entrega de seu projeto, fazendo com que seu negócio sempre fique atualizado e em pleno funcionamento.',
-      icon: <FaTools />,
-    },
-    {
-      title: 'Segurança digital',
-      paragraph:
-        'As melhores tecnologias do mercado para seu projeto garantindo qualidade na entrega e sucesso para seu negocio',
-      icon: <MdOutlineSecurity />,
-    },
-  ]
+import { HomePageInfo } from '@/app/types/homepage'
+import { RichText } from '@/components/Hygraph/richtext'
+import { CMSIcon } from '@/components/Hygraph/IconCms'
+
+type SectionTwoProps = {
+  homeInfo: HomePageInfo
+}
+
+export function SectionTwo({ homeInfo }: SectionTwoProps) {
   return (
     <section className="py-28 flex flex-col lg:flex-row items-start gap-20">
       <div className="w-full">
         <Image
           className="rounded-md"
-          src={image}
+          src={homeInfo.sectionTwo.figure.url}
           alt=""
           width={700}
           height={600}
@@ -38,16 +22,16 @@ export function SectionTwo() {
         />
       </div>
       <div className="flex flex-col items-start justify-center gap-4">
-        {cards.map((item) => (
-          <div key={item.title} className="flex items-start gap-6 self-stretch">
+        {homeInfo.sectionTwo.card.map((card) => (
+          <div key={card.title} className="flex items-start gap-6 self-stretch">
             <i className="text-zinc-50 text-4xl  p-1 bg-violet-950 rounded-md">
-              {item.icon}
+              <CMSIcon icon={card.iconSvg} />
             </i>
             <div className="flex flex-col items-start justify-center gap-4">
-              <h5 className="text-zinc-50 font-bold text-2xl ">{item.title}</h5>
-              <p className="text-zinc-100 font-normal text-base ">
-                {item.paragraph}
-              </p>
+              <h5 className="text-zinc-50 font-bold text-2xl ">{card.title}</h5>
+              <div className="text-zinc-100 font-normal text-base ">
+                <RichText content={card.content.raw} />
+              </div>
             </div>
           </div>
         ))}
