@@ -1,4 +1,4 @@
-import { HomePageInfo } from '@/app/types/homepage'
+import { HomePageInfo } from '@/app/types/dataTypes'
 import Button from '@/components/Buttons/Button'
 import { RichText } from '@/components/Hygraph/richtext'
 import Image from 'next/image'

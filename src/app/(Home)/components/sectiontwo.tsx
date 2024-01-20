@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { HomePageInfo } from '@/app/types/homepage'
+import { HomePageInfo } from '@/app/types/dataTypes'
 import { RichText } from '@/components/Hygraph/richtext'
 import { CMSIcon } from '@/components/Hygraph/IconCms'
 

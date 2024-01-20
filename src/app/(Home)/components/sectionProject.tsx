@@ -1,5 +1,5 @@
 import { ProjectCards } from '@/app/Projects/components/projectCards'
-import { ProjectInfoData } from '@/app/types/homepage'
+import { ProjectInfoData } from '@/app/types/dataTypes'
 
 import Link from 'next/link'
 

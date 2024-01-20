@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card'
-import { Technology } from './technology'
+
 import type { RichTextContent } from '@graphcms/rich-text-types'
 
 export type Social = {
@@ -16,6 +16,10 @@ export type Card = {
   content: {
     raw: RichTextContent
   }
+}
+export type Technology = {
+  iconSVG: string
+  name: string
 }
 
 export type HomePageInfo = {

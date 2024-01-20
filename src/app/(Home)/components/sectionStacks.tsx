@@ -1,4 +1,4 @@
-import { HomePageInfo } from '@/app/types/homepage'
+import { HomePageInfo } from '@/app/types/dataTypes'
 import { Cards } from './cards'
 
 type SectionStacksProps = {
