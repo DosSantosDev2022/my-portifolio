@@ -8,7 +8,7 @@ export function ProfileContactPage() {
     <section className="py-28 space-y-20">
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="w-full flex">
-          <h3 className="text-zinc-50 font-bold text-5xl">
+          <h3 className="text-zinc-50 font-bold lg:text-5xl text-3xl">
             Transformando ideias em experiências digitais sofisticadas.
           </h3>
         </div>
@@ -39,7 +39,7 @@ export function ProfileContactPage() {
       </div>
       <div className="flex flex-col lg:flex-row gap-12 items-start justify-center">
         <div className="w-full flex flex-col space-y-6">
-          <h4 className="text-zinc-50 font-bold text-4xl">
+          <h4 className="text-zinc-50 font-bold text-3xl">
             Experiência e dedicação para desenvolver seu projeto
           </h4>
           <p className="text-zinc-100 font-medium text-lg">
