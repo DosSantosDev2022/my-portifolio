@@ -21,7 +21,7 @@ export function ProjectCards({
   title,
 }: ProjectCardsProps) {
   return (
-    <Card className="lg:w-[380px] w-full">
+    <Card className="lg:w-[350px] h-[430px] w-full ">
       <CardHeader>
         <Image
           className=" w-full"
@@ -35,9 +35,9 @@ export function ProjectCards({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="p-3 flex items-center">
         <Link
-          className="bg-violet-900 p-2 rounded-md text-sm text-zinc-50 hover:bg-violet-800 transition-all"
+          className="bg-violet-900 p-2 rounded-md text-sm text-zinc-50 hover:bg-violet-700 transition-all duration-500"
           href={'/Projects'}
         >
           Ver mais
