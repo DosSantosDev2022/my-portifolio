@@ -5,7 +5,7 @@ import { NavFooter } from '@/components/Footer/navFooter'
 export function FooterPageLayout() {
   return (
     <>
-      <footer className="bg-zinc-950 lg:px-16 px-8 py-20 flex flex-col gap-20">
+      <footer className="bg-zinc-950 lg:px-16 px-6 py-20 flex flex-col gap-20">
         <div className="w-full flex flex-col lg:flex-row items-start justify-around gap-32">
           <div className="w-full flex flex-col items-start justify-center gap-6">
             <h1 className="text-slate-50 text-4xl font-bold">DosSantosDev</h1>

@@ -13,9 +13,9 @@ export default function Button({
 }: ButtonProps) {
   const variantClasses = {
     primary:
-      'bg-zinc-50 text-zinc-900 hover:bg-zinc-100 hover:scale-105 transition-all',
+      'bg-zinc-50 text-zinc-900 hover:bg-zinc-100 hover:scale-105 transition-all duration-500',
     outlined: 'bg-transparent border border-zinc-50 text-zinc-50',
-    highlight: 'text-zinc-50 hover:bg-violet-900 bg-violet-950 ',
+    highlight: 'text-zinc-50 hover:bg-violet-900 duration-500 bg-violet-950 ',
   }
 
   const _className = twMerge(

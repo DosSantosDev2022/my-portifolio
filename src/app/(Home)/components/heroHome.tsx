@@ -12,7 +12,7 @@ export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
     <div className="flex flex-col lg:flex-row items-start justify-center py-28 px-2 gap-20">
       <div className="w-full space-y-7">
         <div className="flex flex-col gap-3 ">
-          <h2 className="lg:text-7xl text-7xl font-bold text-zinc-50">
+          <h2 className="lg:text-7xl text-5xl font-bold text-zinc-50">
             {homeInfo.title}
           </h2>
           <div>
