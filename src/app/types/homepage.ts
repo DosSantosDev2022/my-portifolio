@@ -43,7 +43,6 @@ export type HomePageInfo = {
       url: string
     }
   }
-
   sectionStack: {
     title: string
     card: Card[]
@@ -52,4 +51,22 @@ export type HomePageInfo = {
 
 export type HomePageData = {
   homepage: HomePageInfo
+}
+
+export type ProjectInfoData = {
+  slug: string
+  title: string
+  description: string
+  coverImage: {
+    url: string
+  }
+  deployLink: string
+  codeLink: string
+  completeDescription: {
+    raw: RichTextContent
+  }
+}
+
+export type Project = {
+  project: ProjectInfoData[]
 }

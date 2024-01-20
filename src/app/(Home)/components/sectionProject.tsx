@@ -1,7 +1,13 @@
 import { ProjectCards } from '@/app/Projects/components/projectCards'
+import { ProjectInfoData } from '@/app/types/homepage'
+
 import Link from 'next/link'
 
-export function SectionProjectResums() {
+type HighlightedProjectsProps = {
+  data: ProjectInfoData[]
+}
+
+export function HighlightedProjects({ data }: HighlightedProjectsProps) {
   return (
     <section className="py-28  flex flex-col items-center justify-center gap-20">
       <div className="w-full flex flex-col items-start justify-center gap-10">
@@ -11,21 +17,14 @@ export function SectionProjectResums() {
           </h4>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-5">
-          <ProjectCards
-            title="PROJETO CARD 01"
-            coverImage="/placeholder.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-          />
-          <ProjectCards
-            title="PROJETO CARD 02"
-            coverImage="/placeholder.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-          />
-          <ProjectCards
-            title="PROJETO CARD 03"
-            coverImage="/placeholder.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-          />
+          {data.map((p) => (
+            <ProjectCards
+              key={p.title}
+              title={p.title}
+              coverImage={p.coverImage.url}
+              description={p.description}
+            />
+          ))}
         </div>
 
         <div className="w-full flex items-start">
