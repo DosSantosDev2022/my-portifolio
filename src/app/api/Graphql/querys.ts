@@ -90,19 +90,34 @@ export const GET_DATA_ABOUT_PAGE = async (): Promise<AboutPageInfo> => {
   const query = `
   query AboutPage {
     aboutPage(where: {slug: "about"}) {
-      headerContact {
+      sectionOne {
         title
         image {
           url
         }
       }
-      profileContact {
+      sectionTwo {
         title
         content {
           raw
         }
         image {
           url
+        }
+      }
+      sectionThree {
+        title
+        rowText
+        figure {
+          url
+        }
+        card {
+          title
+          iconSvg
+          content {
+            text
+          }
+          id
         }
       }
     }

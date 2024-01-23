@@ -17,6 +17,14 @@ export type Card = {
     raw: RichTextContent
   }
 }
+export type simpleCard = {
+  id: string
+  title: string
+  iconSvg: string
+  content: {
+    text: string
+  }
+}
 export type Technology = {
   iconSVG: string
   name: string
@@ -77,13 +85,13 @@ export type Project = {
 }
 
 export type AboutPageData = {
-  headerContact: {
+  sectionOne: {
     title: string
     image: {
       url: string
     }
   }
-  profileContact: {
+  sectionTwo: {
     title: string
     content: {
       raw: RichTextContent
@@ -91,6 +99,14 @@ export type AboutPageData = {
     image: {
       url: string
     }
+  }
+  sectionThree: {
+    title: string
+    rowText: string
+    figure: {
+      url: string
+    }
+    card: simpleCard[]
   }
 }
 

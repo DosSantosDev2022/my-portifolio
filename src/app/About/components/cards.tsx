@@ -14,7 +14,7 @@ export function CardsServices({ paragraph, title }: CardsServicesProps) {
         </i>
         <div className="flex flex-col items-start gap-1">
           <h6 className="text-zinc-50 font-semibold">{title} </h6>
-          <p className="text-zinc-300 font-light">{paragraph} </p>
+          <p className="text-zinc-50 font-normal">{paragraph}</p>
         </div>
       </div>
     </>

@@ -11,13 +11,13 @@ export function HeaderContactPage({ data }: HeaderContactPageProps) {
       <div className="flex flex-col lg:flex-row items-start justify-center gap-12">
         <div className="w-full">
           <h2 className="text-zinc-50 font-bold lg:text-5xl text-3xl">
-            {data.headerContact.title}
+            {data.sectionOne.title}
           </h2>
         </div>
         <div className="w-full flex items-center justify-end">
           <Image
             alt=""
-            src={data.headerContact.image.url}
+            src={data.sectionOne.image.url}
             width={600}
             height={400}
             quality={100}
