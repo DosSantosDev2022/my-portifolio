@@ -23,6 +23,7 @@ export function HighlightedProjects({ data }: HighlightedProjectsProps) {
               title={p.title}
               coverImage={p.coverImage.url}
               description={p.description}
+              slug={p.slug}
             />
           ))}
         </div>

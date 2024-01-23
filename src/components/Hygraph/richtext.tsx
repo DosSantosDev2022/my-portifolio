@@ -25,6 +25,7 @@ export function RichText({ fontSize = 'md', ...props }: RichTextProps) {
         return 'text-md'
     }
   }
+
   return (
     <CmsRichText
       {...props}
@@ -35,7 +36,9 @@ export function RichText({ fontSize = 'md', ...props }: RichTextProps) {
           </b>
         ),
         p: ({ children }) => (
-          <p className={` text-zinc-200 font-normal ${getFontSizeClass()}`}>
+          <p
+            className={` text-zinc-200 font-normal mt-4 ${getFontSizeClass()}`}
+          >
             {children}
           </p>
         ),

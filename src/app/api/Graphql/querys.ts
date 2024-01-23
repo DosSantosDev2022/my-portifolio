@@ -73,10 +73,15 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
       coverImage {
         url
       }
+      technologies {
+        name
+        iconSvg
+      }
+      completeDescription {
+        raw
+      }
     }
   }
-  
-  
   `
   return fetchHygraph(query)
 }

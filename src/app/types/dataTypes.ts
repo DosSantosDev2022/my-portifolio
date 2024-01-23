@@ -66,6 +66,7 @@ export type ProjectInfoData = {
   }
   deployLink: string
   codeLink: string
+  technologies: Technology[]
   completeDescription: {
     raw: RichTextContent
   }

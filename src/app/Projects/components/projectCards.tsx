@@ -13,12 +13,14 @@ interface ProjectCardsProps {
   title: string
   description: string
   coverImage: string
+  slug: string
 }
 
 export function ProjectCards({
   coverImage,
   description,
   title,
+  slug,
 }: ProjectCardsProps) {
   return (
     <Card className="lg:w-[350px] h-[430px] w-full ">
@@ -38,7 +40,7 @@ export function ProjectCards({
       <CardFooter className="p-3 flex items-center">
         <Link
           className="bg-violet-900 p-2 rounded-md text-sm text-zinc-50 hover:bg-violet-700 transition-all duration-500"
-          href={'/Projects'}
+          href={`/Project/${slug}`}
         >
           Ver mais
         </Link>

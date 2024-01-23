@@ -17,6 +17,7 @@ export default async function ProjectPage() {
             title={p.title}
             description={p.description}
             coverImage={p.coverImage.url}
+            slug={p.slug}
           />
         ))}
       </div>
