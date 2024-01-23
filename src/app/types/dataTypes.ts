@@ -75,3 +75,25 @@ export type ProjectInfoData = {
 export type Project = {
   project: ProjectInfoData[]
 }
+
+export type AboutPageData = {
+  headerContact: {
+    title: string
+    image: {
+      url: string
+    }
+  }
+  profileContact: {
+    title: string
+    content: {
+      raw: RichTextContent
+    }
+    image: {
+      url: string
+    }
+  }
+}
+
+export type AboutPageInfo = {
+  aboutPage: AboutPageData
+}

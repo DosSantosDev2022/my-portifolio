@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import { FaGithub, FaLinkedin } from 'react-icons/fa6'
+
 import Button from '@/components/Buttons/Button'
 import { NavMenu } from '@/components/Header/navMenu'
 import { HiBars3BottomRight } from 'react-icons/hi2'
@@ -29,22 +31,21 @@ export function Header() {
         >
           <NavMenu />
           <div className="flex items-center justify-center gap-4 ">
-            <Button variant="primary">
-              <Link
-                target="_blank"
-                href={'https://github.com/DosSantosDev2022'}
-              >
-                Github
-              </Link>
-            </Button>
-            <Button variant="highlight">
-              <Link
-                target="_blank"
-                href={'https://www.linkedin.com/in/juliano-santos-234bab257/'}
-              >
-                Linkedin
-              </Link>
-            </Button>
+            <Link
+              className="text-zinc-50 text-3xl hover:text-violet-800 duration-500 transition-all"
+              target="_blank"
+              href={'https://github.com/DosSantosDev2022'}
+            >
+              <FaGithub />
+            </Link>
+
+            <Link
+              className="text-zinc-50 text-3xl hover:text-violet-800 duration-500 transition-all"
+              target="_blank"
+              href={'https://www.linkedin.com/in/juliano-santos-234bab257/'}
+            >
+              <FaLinkedin />
+            </Link>
           </div>
         </div>
       </div>

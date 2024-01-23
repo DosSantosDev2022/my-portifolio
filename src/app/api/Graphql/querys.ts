@@ -1,5 +1,5 @@
 import { fetchHygraph } from '@/app/api/Hygraph/Hygraph-api'
-import { HomePageData, Project } from '@/app/types/dataTypes'
+import { AboutPageInfo, HomePageData, Project } from '@/app/types/dataTypes'
 
 export const GET_ALL_DATA = async (): Promise<HomePageData> => {
   const query = `
@@ -82,6 +82,32 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
       }
     }
   }
+  `
+  return fetchHygraph(query)
+}
+
+export const GET_DATA_ABOUT_PAGE = async (): Promise<AboutPageInfo> => {
+  const query = `
+  query AboutPage {
+    aboutPage(where: {slug: "about"}) {
+      headerContact {
+        title
+        image {
+          url
+        }
+      }
+      profileContact {
+        title
+        content {
+          raw
+        }
+        image {
+          url
+        }
+      }
+    }
+  }
+  
   `
   return fetchHygraph(query)
 }

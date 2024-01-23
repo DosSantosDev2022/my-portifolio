@@ -2,39 +2,24 @@ import Image from 'next/image'
 import Profile from '@/assets/Profile.png'
 
 import { CardsServices } from './cards'
+import { AboutPageData } from '@/app/types/dataTypes'
+import { RichText } from '@/components/Hygraph/richtext'
 
-export function ProfileContactPage() {
+type ProfileContactPageProps = {
+  data: AboutPageData
+}
+
+export function ProfileContactPage({ data }: ProfileContactPageProps) {
   return (
     <section className="py-28 space-y-20">
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="w-full flex">
           <h3 className="text-zinc-50 font-bold lg:text-5xl text-3xl">
-            Transformando ideias em experiências digitais sofisticadas.
+            {data.profileContact.title}
           </h3>
         </div>
         <div className="w-full space-y-4">
-          <p className="text-zinc-100 font-light text-md">
-            Olá, eu sou{' '}
-            <span className="text-violet-900 font-bold">Juliano Santos</span>,
-            um entusiasta apaixonado pelo universo da programação front-end.
-            Transformando linhas de código em experiências visuais envolventes,
-            meu objetivo é criar interfaces web que não apenas cativem, mas
-            também proporcionem uma experiência fluida e intuitiva para os
-            usuários.
-          </p>
-          <p className="text-zinc-100 font-light text-md">
-            Com uma sólida base em HTML, CSS e JavaScript, trago consigo a
-            habilidade de traduzir conceitos criativos em designs interativos e
-            responsivos. Ao longo da minha jornada, tenho explorado as últimas
-            tendências e tecnologias front-end, sempre buscando inovação e
-            aprimoramento contínuo.
-          </p>
-          <p className="text-zinc-100 font-light text-md">
-            Acredito no poder da colaboração e na importância de entender as
-            necessidades dos usuários para criar soluções significativas. Com
-            habilidades em frameworks modernos, como React e Next Js, busco
-            elevar o padrão da web, tornando-a mais atraente e funcional.
-          </p>
+          <RichText content={data.profileContact.content.raw} />
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-12 items-start justify-center">
