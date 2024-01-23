@@ -6,9 +6,9 @@ import Link from 'next/link'
 export function NavFooter() {
   const navigation = [
     { title: 'Link 01', linkName: 'Home', url: '/' },
-    { title: 'Link 01', linkName: 'Sobre mim', url: '/' },
-    { title: 'Link 01', linkName: 'Projetos', url: '/' },
-    { title: 'Link 01', linkName: 'Contato', url: '/' },
+    { title: 'Link 01', linkName: 'Sobre mim', url: '/About' },
+    { title: 'Link 01', linkName: 'Projetos', url: '/Projects' },
+    { title: 'Link 01', linkName: 'Contato', url: '/Contact' },
   ]
   const Services = [
     { title: 'Link 01', linkName: 'Web developer', url: '/' },
@@ -30,7 +30,7 @@ export function NavFooter() {
             <h4 className="text-zinc-50 font-bold text-2xl">Navegação</h4>
             {navigation.map((link) => (
               <Link
-                href={link.linkName}
+                href={link.url}
                 key={link.linkName}
                 className="text-zinc-50 font-light text-xl hover:underline transition-all"
               >
@@ -46,7 +46,7 @@ export function NavFooter() {
             <h4 className="text-zinc-50 font-bold text-2xl">Serviços</h4>
             {Services.map((link) => (
               <Link
-                href={link.linkName}
+                href={link.url}
                 key={link.linkName}
                 className="text-zinc-50 font-light text-xl hover:underline transition-all"
               >

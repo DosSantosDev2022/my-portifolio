@@ -10,9 +10,10 @@ export async function POST() {
     const data = await resend.emails.send({
       from: `${process.env.EMAIL_FROM_NAME} < ${process.env.EMAIL_FROM_EMAIL} >`,
       to: ['delivered@resend.dev'],
+      reply_to: '',
       subject: 'Hello world',
       text: '',
-      react: EmailTemplate({ username: 'Juliano' }),
+      react: EmailTemplate({ username: 'Juliano Santos' }),
     })
     return NextResponse.json(data)
   } catch (error) {

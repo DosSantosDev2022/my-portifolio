@@ -1,5 +1,5 @@
 import { fetchHygraph } from '@/app/api/Hygraph/Hygraph-api'
-import { HomePageData, Project } from '@/app/types/homepage'
+import { HomePageData, Project } from '@/app/types/dataTypes'
 
 export const GET_ALL_DATA = async (): Promise<HomePageData> => {
   const query = `

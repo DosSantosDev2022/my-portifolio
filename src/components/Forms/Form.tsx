@@ -25,8 +25,18 @@ export function Form() {
   } = useForm<FormInput>({
     resolver: zodResolver(zodSchemaFomr),
   })
-  const onSubmit: SubmitHandler<FormInput> = (data) => {
-    toast.success('Formulário enviado com sucesso')
+  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    if (response.ok) {
+      toast.success('Formulário enviado com sucesso')
+    } else toast.error('Erro ao enviar formulário, tente novamente ! ')
     reset()
   }
 

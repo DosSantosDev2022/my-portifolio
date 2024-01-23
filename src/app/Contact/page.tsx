@@ -15,13 +15,13 @@ export default function ContactPage() {
             Vamos fechar uma parceria ?
           </p>
           <div className="flex flex-col items-start justify-center gap-2">
-            <span className="text-zinc-50 font-light text-sm flex items-center gap-2">
+            <span className="text-zinc-50 font-light text-lg flex items-center gap-2">
               <MdEmail /> dossantosdevoficial@gmail.com
             </span>
-            <span className="text-zinc-50 font-light  text-sm flex items-center gap-2">
+            <span className="text-zinc-50 font-light  text-lg flex items-center gap-2">
               <FaSquarePhone /> +55 11 91645-3897
             </span>
-            <span className="text-zinc-50 font-light  text-sm flex items-center gap-2">
+            <span className="text-zinc-50 font-light  text-lg flex items-center gap-2">
               <HiMiniMapPin /> Itupeva - SP
             </span>
           </div>
