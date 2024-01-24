@@ -1,10 +1,5 @@
 'use client'
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogTitle,
-} from '@/components/ui/dialog'
+import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog'
 import {
   Carousel,
   CarouselContent,
@@ -19,7 +14,6 @@ interface ModalImageProps {
   img01: string
   img02: string
   img03: string
-  projectName: string
 }
 
 export function ModalImage({
@@ -27,7 +21,6 @@ export function ModalImage({
   img01,
   img02,
   img03,
-  projectName,
 }: ModalImageProps) {
   return (
     <Dialog>
@@ -35,11 +28,12 @@ export function ModalImage({
         <Image alt="" src={coverImage} width={500} height={500} quality={100} />
       </DialogTrigger>
       <DialogContent>
-        <DialogTitle>{projectName} </DialogTitle>
+        {/*  <DialogTitle>{projectName} </DialogTitle> */}
         <Carousel>
           <CarouselContent>
             <CarouselItem>
               <Image
+                className="w-full h-[480px] rounded-md "
                 alt=""
                 src={img01}
                 width={500}
@@ -49,6 +43,7 @@ export function ModalImage({
             </CarouselItem>
             <CarouselItem>
               <Image
+                className="w-full h-[480px] rounded-md "
                 alt=""
                 src={img02}
                 width={500}
@@ -58,6 +53,7 @@ export function ModalImage({
             </CarouselItem>
             <CarouselItem>
               <Image
+                className="w-full h-[480px] rounded-md "
                 alt=""
                 src={img03}
                 width={500}

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { RichText } from '@/components/Hygraph/richtext'
 
 import { ModalImage } from '@/components/modal/modalImage'
+import Button from '@/components/Buttons/Button'
+import Link from 'next/link'
 
 export default async function ProjectPageDetails({
   params,
@@ -70,12 +72,22 @@ export default async function ProjectPageDetails({
           </div>
 
           <ModalImage
-            projectName={projectDetail.title}
             coverImage={projectDetail.coverImage.url}
             img01={projectDetail.carouseImage.image01.url}
             img02={projectDetail.carouseImage.image02.url}
             img03={projectDetail.carouseImage.image03.url}
           />
+
+          <div className="mt-4 flex items-start justify-start gap-3 w-full">
+            <Button>
+              <Link href={projectDetail.deployLink}>Deploy do projeto</Link>
+            </Button>
+            <Button>
+              <Link target="_blank" href={projectDetail.codeLink}>
+                Repositório do projeto
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
