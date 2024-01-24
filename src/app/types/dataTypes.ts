@@ -108,6 +108,11 @@ export type AboutPageData = {
     }
     card: simpleCard[]
   }
+  sectionFour: {
+    title: string
+    rowText: string
+    card: simpleCard[]
+  }
 }
 
 export type AboutPageInfo = {

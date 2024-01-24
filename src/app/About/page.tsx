@@ -12,7 +12,7 @@ export default async function AboutPage() {
         <HeaderContactPage data={aboutPage} />
         <ProfileContactPage data={aboutPage} />
         <SectionTechnology />
-        <SectionValues />
+        <SectionValues data={aboutPage} />
       </>
     </>
   )
