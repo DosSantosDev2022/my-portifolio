@@ -2,6 +2,8 @@ import { GET_ALL_PROJECTS } from '@/app/api/Graphql/querys'
 import Image from 'next/image'
 import { RichText } from '@/components/Hygraph/richtext'
 
+import { ModalImage } from '@/components/modal/modalImage'
+
 export default async function ProjectPageDetails({
   params,
 }: {
@@ -32,8 +34,8 @@ export default async function ProjectPageDetails({
           quality={100}
         />
       </div>
-      <div className="lg:py-20 lg:px-16 py-10  space-y-16">
-        <div className="flex flex-col gap-6">
+      <div className="lg:w-[768px] w-full lg:py-20 lg:px-16 py-10  space-y-16 ">
+        <div className="flex flex-col gap-6 ">
           <h2 className="text-zinc-50 font-bold text-6xl">
             {projectDetail.title}
           </h2>
@@ -41,13 +43,13 @@ export default async function ProjectPageDetails({
             {projectDetail.description}
           </p>
           <div className="flex flex-col gap-3">
-            <h4 className="font-semibold text-2xl text-violet-800">
+            <span className="font-normal text-xl text-violet-700">
               Tecnologias ulitiladas
-            </h4>
+            </span>
             <div className="flex items-center justify-start gap-2">
               {tech?.map((i) => (
                 <span
-                  className="bg-zinc-50 text-zinc-500 p-2 rounded-md shadow-md"
+                  className="bg-zinc-950 text-zinc-50 p-2 rounded-md shadow-md"
                   key={i.name}
                 >
                   {i.name}
@@ -56,19 +58,24 @@ export default async function ProjectPageDetails({
             </div>
           </div>
         </div>
-        <div className=" flex flex-col gap-4">
+        <div className=" flex flex-col gap-4 ">
           <h4 className="text-zinc-50 font-bold text-4xl">
             Conheça sobre o projeto
           </h4>
-          <div className="text-zinc-300 font-normal space-y-4">
+          <div className=" space-y-4 ">
             <RichText
               content={projectDetail.completeDescription.raw}
               fontSize="text-sm"
             />
           </div>
 
-          <div></div>
-          {/* Colocar seção de imagens do projeto */}
+          <ModalImage
+            projectName={projectDetail.title}
+            coverImage={projectDetail.coverImage.url}
+            img01={projectDetail.carouseImage.image01.url}
+            img02={projectDetail.carouseImage.image02.url}
+            img03={projectDetail.carouseImage.image03.url}
+          />
         </div>
       </div>
     </div>

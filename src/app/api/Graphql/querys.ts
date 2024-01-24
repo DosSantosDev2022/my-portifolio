@@ -80,6 +80,17 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
       completeDescription {
         raw
       }
+      carouseImage {
+        image01 {
+          url
+        }
+        image02 {
+          url
+        }
+        image03 {
+          url
+        }
+      }
     }
   }
   `

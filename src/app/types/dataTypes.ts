@@ -78,6 +78,17 @@ export type ProjectInfoData = {
   completeDescription: {
     raw: RichTextContent
   }
+  carouseImage: {
+    image01: {
+      url: string
+    }
+    image02: {
+      url: string
+    }
+    image03: {
+      url: string
+    }
+  }
 }
 
 export type Project = {
