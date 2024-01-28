@@ -1,3 +1,4 @@
+import { PaginationComponent } from '@/components/Pagination/pagination'
 import { GET_ALL_PROJECTS } from '../api/Graphql/querys'
 import { ProjectCards } from './components/projectCards'
 
@@ -21,6 +22,7 @@ export default async function ProjectPage() {
           />
         ))}
       </div>
+      <PaginationComponent />
     </div>
   )
 }
