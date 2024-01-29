@@ -11,10 +11,10 @@ export function TechsList() {
   ]
 
   return (
-    <div className="w-full p-2 flex flex-wrap items-start justify-center gap-12">
+    <div className="flex w-full flex-wrap items-start justify-center gap-12 p-2">
       {techlist.map((item) => (
         <span
-          className="text-zinc-50 bg-zinc-700  rounded-md w-32 px-1 py-2 text-center font-bold text-md "
+          className="text-md w-32  rounded-md bg-zinc-700 px-1 py-2 text-center font-bold text-zinc-50 "
           key={item.id}
         >
           {item.name}
@@ -28,7 +28,7 @@ export function SectionTechnology() {
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-6 py-20">
-        <h6 className="text-zinc-50 font-bold lg:text-4xl text-3xl text-center">
+        <h6 className="text-center text-3xl font-bold text-zinc-50 lg:text-4xl">
           As melhores tecnologias para seu projeto
         </h6>
         <TechsList />

@@ -44,7 +44,7 @@ export function Form() {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-4 w-full"
+        className="flex w-full flex-col gap-4"
       >
         <Input
           type="text"
@@ -53,7 +53,7 @@ export function Form() {
           label="Digite seu nome completo"
         />
         {errors && (
-          <span className="text-red-500 font-normal">
+          <span className="font-normal text-red-500">
             {errors.name?.message}
           </span>
         )}
@@ -64,7 +64,7 @@ export function Form() {
           label="Digite seu melhor email"
         />
         {errors && (
-          <span className="text-red-500 font-normal">
+          <span className="font-normal text-red-500">
             {errors.email?.message}
           </span>
         )}

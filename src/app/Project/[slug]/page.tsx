@@ -19,16 +19,16 @@ export default async function ProjectPageDetails({
   const tech = projectDetail?.technologies
   if (!projectDetail) {
     return (
-      <div className="flex flex-col items-center justify-center py-28 px-2 gap-20 h-screen">
-        <span className="text-white text-2xl font-medium">
+      <div className="flex h-screen flex-col items-center justify-center gap-20 px-2 py-28">
+        <span className="text-2xl font-medium text-white">
           Projeto não encontrado
         </span>
       </div>
     )
   }
   return (
-    <div className="flex flex-col items-center justify-center py-28 gap-20 ">
-      <div className="w-full lg:h-[450px] h-[200px] relative">
+    <div className="flex flex-col items-center justify-center gap-20 py-28 ">
+      <div className="relative h-[200px] w-full lg:h-[450px]">
         <div
           className="absolute inset-0 z-[-1]  "
           style={{
@@ -37,22 +37,22 @@ export default async function ProjectPageDetails({
         />
       </div>
 
-      <div className="lg:w-[768px] w-full lg:py-20  py-10  space-y-16 ">
+      <div className="w-full space-y-16 py-10  lg:w-[768px]  lg:py-20 ">
         <div className="flex flex-col gap-6 ">
-          <h2 className="text-zinc-50 font-bold text-6xl">
+          <h2 className="text-6xl font-bold text-zinc-50">
             {projectDetail.title}
           </h2>
-          <p className="text-zinc-300 font-normal text-sm">
+          <p className="text-sm font-normal text-zinc-300">
             {projectDetail.description}
           </p>
           <div className="flex flex-col gap-3">
-            <span className="font-normal text-xl text-violet-500">
+            <span className="text-xl font-normal text-violet-500">
               Tecnologias ulitiladas
             </span>
-            <div className="flex items-center justify-start flex-wrap gap-2">
+            <div className="flex flex-wrap items-center justify-start gap-2">
               {tech?.map((i) => (
                 <span
-                  className="bg-zinc-950 text-zinc-50 p-2 rounded-md shadow-md"
+                  className="rounded-md bg-zinc-950 p-2 text-zinc-50 shadow-md"
                   key={i.name}
                 >
                   {i.name}
@@ -62,7 +62,7 @@ export default async function ProjectPageDetails({
           </div>
         </div>
         <div className=" flex flex-col gap-4 ">
-          <h4 className="text-zinc-50 font-bold text-4xl">
+          <h4 className="text-4xl font-bold text-zinc-50">
             Conheça sobre o projeto
           </h4>
           <div className=" space-y-4 ">
@@ -79,7 +79,7 @@ export default async function ProjectPageDetails({
             img03={projectDetail.carouseImage.image03.url}
           />
 
-          <div className="mt-4 flex items-start justify-start gap-3 w-full">
+          <div className="mt-4 flex w-full items-start justify-start gap-3">
             <Button>
               <Link href={projectDetail.deployLink}>Deploy do projeto</Link>
             </Button>

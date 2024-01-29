@@ -9,14 +9,14 @@ type HighlightedProjectsProps = {
 
 export function HighlightedProjects({ data }: HighlightedProjectsProps) {
   return (
-    <section className="py-28  flex flex-col items-center justify-center gap-20">
-      <div className="w-full flex flex-col items-center justify-center gap-10">
-        <div className="w-full flex items-center justify-center">
-          <h4 className="text-zinc-50 font-bold text-4xl">
+    <section className="flex  flex-col items-center justify-center gap-20 py-28">
+      <div className="flex w-full flex-col items-center justify-center gap-10">
+        <div className="flex w-full items-center justify-center">
+          <h4 className="text-4xl font-bold text-zinc-50">
             Conheça os meus <span className="text-violet-900">projetos</span>
           </h4>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-5">
+        <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
           {data.map((p) => (
             <ProjectCards
               key={p.title}
@@ -28,9 +28,9 @@ export function HighlightedProjects({ data }: HighlightedProjectsProps) {
           ))}
         </div>
 
-        <div className="w-full flex items-start justify-center">
+        <div className="flex w-full items-start justify-center">
           <Link
-            className="bg-zinc-700 p-2 rounded-md text-sm text-zinc-50 hover:bg-zinc-600 transition-all"
+            className="rounded-md bg-zinc-700 p-2 text-sm text-zinc-50 transition-all hover:bg-zinc-600"
             href={'/Projects'}
           >
             Ver todos

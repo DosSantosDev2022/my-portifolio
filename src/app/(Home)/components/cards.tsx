@@ -13,7 +13,7 @@ interface CardsProps {
 export function Cards({ description, CardTitle, CardIcon }: CardsProps) {
   return (
     <div
-      className="w-[320px] h-[300px] flex flex-col items-center justify-center gap-2 border border-zinc-700 shadow-lg rounded-md p-4 "
+      className="flex h-[300px] w-[320px] flex-col items-center justify-center gap-2 rounded-md border border-zinc-700 p-4 shadow-lg "
       key={CardTitle}
     >
       <i className="w-10">
@@ -21,7 +21,7 @@ export function Cards({ description, CardTitle, CardIcon }: CardsProps) {
       </i>
 
       <div className="space-y-4 text-center">
-        <h4 className="text-zinc-50 text-2xl font-bold ">{CardTitle} </h4>
+        <h4 className="text-2xl font-bold text-zinc-50 ">{CardTitle} </h4>
         <RichText fontSize="sm" content={description.raw} />
       </div>
     </div>

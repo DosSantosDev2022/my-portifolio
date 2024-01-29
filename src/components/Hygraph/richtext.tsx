@@ -31,27 +31,27 @@ export function RichText({ fontSize = 'md', ...props }: RichTextProps) {
       {...props}
       renderers={{
         bold: ({ children }) => (
-          <b className={`text-zinc-200 font-bold ${getFontSizeClass()}`}>
+          <b className={`font-bold text-zinc-200 ${getFontSizeClass()}`}>
             {children}
           </b>
         ),
         h2: ({ children }) => (
-          <h2 className="text-3xl text-violet-700 font-bold">{children}</h2>
+          <h2 className="text-3xl font-bold text-violet-700">{children}</h2>
         ),
         ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
-        ul: ({ children }) => <ul className="list-disc ml-5">{children} </ul>,
+        ul: ({ children }) => <ul className="ml-5 list-disc">{children} </ul>,
         li: ({ children }) => (
-          <li className="text-zinc-50 font-light ">{children} </li>
+          <li className="font-light text-zinc-50 ">{children} </li>
         ),
         h5: ({ children }) => (
           <h5
-            className={` text-zinc-200  mt-4 font-bold  ${getFontSizeClass()}`}
+            className={` mt-4  font-bold text-zinc-200  ${getFontSizeClass()}`}
           >
             {children}
           </h5>
         ),
         p: ({ children }) => (
-          <p className={` text-zinc-200 font-light mt-4 ${getFontSizeClass()}`}>
+          <p className={` mt-4 font-light text-zinc-200 ${getFontSizeClass()}`}>
             {children}
           </p>
         ),

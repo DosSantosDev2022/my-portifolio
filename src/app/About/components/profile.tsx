@@ -11,10 +11,10 @@ type ProfileContactPageProps = {
 export function ProfileContactPage({ data }: ProfileContactPageProps) {
   const cards = data.sectionThree.card
   return (
-    <section className="py-28 space-y-20">
-      <div className="flex flex-col lg:flex-row gap-12">
-        <div className="w-full flex">
-          <h3 className="text-zinc-50 font-bold lg:text-5xl text-3xl">
+    <section className="space-y-20 py-28">
+      <div className="flex flex-col gap-12 lg:flex-row">
+        <div className="flex w-full">
+          <h3 className="text-3xl font-bold text-zinc-50 lg:text-5xl">
             {data.sectionTwo.title}
           </h3>
         </div>
@@ -22,12 +22,12 @@ export function ProfileContactPage({ data }: ProfileContactPageProps) {
           <RichText content={data.sectionTwo.content.raw} />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-12 items-start justify-center">
-        <div className="w-full flex flex-col space-y-6">
-          <h4 className="text-zinc-50 font-bold text-3xl">
+      <div className="flex flex-col items-start justify-center gap-12 lg:flex-row">
+        <div className="flex w-full flex-col space-y-6">
+          <h4 className="text-3xl font-bold text-zinc-50">
             {data.sectionThree.title}
           </h4>
-          <p className="text-zinc-100 font-medium text-lg">
+          <p className="text-lg font-medium text-zinc-100">
             {data.sectionThree.rowText}
           </p>
           <div className="flex flex-col gap-2">
@@ -40,7 +40,7 @@ export function ProfileContactPage({ data }: ProfileContactPageProps) {
             ))}
           </div>
         </div>
-        <div className="w-full flex items-start justify-center">
+        <div className="flex w-full items-start justify-center">
           <Image
             alt="Juliano Santos"
             src={data.sectionThree.figure.url}

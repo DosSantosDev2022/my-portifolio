@@ -44,10 +44,10 @@ export function AccordionComponent() {
       <Accordion className="w-full" type="single" collapsible>
         {accordionsItens.map((item) => (
           <AccordionItem key={item.id} value={item.value}>
-            <AccordionTrigger className="bg-zinc-800 text-zinc-50 font-semibold text-base text-start  h-20 rounded-sm">
+            <AccordionTrigger className="h-20 rounded-sm bg-zinc-800 text-start text-base  font-semibold text-zinc-50">
               {item.Trigger}
             </AccordionTrigger>
-            <AccordionContent className="bg-zinc-900 text-zinc-50 p-2">
+            <AccordionContent className="bg-zinc-900 p-2 text-zinc-50">
               {item.content}
             </AccordionContent>
           </AccordionItem>

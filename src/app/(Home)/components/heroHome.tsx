@@ -9,10 +9,10 @@ type HeroHomePageProps = {
 
 export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-center py-28 px-2 gap-20">
+    <div className="flex flex-col items-start justify-center gap-20 px-2 py-28 lg:flex-row">
       <div className="w-full space-y-7">
         <div className="flex flex-col gap-3 ">
-          <h2 className="lg:text-7xl text-5xl font-bold text-zinc-50">
+          <h2 className="text-5xl font-bold text-zinc-50 lg:text-7xl">
             {homeInfo.title}
           </h2>
           <div>
@@ -29,7 +29,7 @@ export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
           ))}
         </div>
       </div>
-      <div className="w-full flex items-center justify-end">
+      <div className="flex w-full items-center justify-end">
         <Image
           className="w-[450px] rounded-md"
           alt=""

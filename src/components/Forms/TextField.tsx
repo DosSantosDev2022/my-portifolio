@@ -7,14 +7,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ type = 'text', name = '', label, ...props }, ref) => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex w-full flex-col gap-2">
         {label && (
-          <label className="text-zinc-50 font-normal-" htmlFor={name}>
+          <label className="font-normal- text-zinc-50" htmlFor={name}>
             {label}
           </label>
         )}
         <input
-          className="bg-zinc-200 appearance-none border-2 border-zinc-200 rounded w-full py-2 px-4 text-zinc-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          className="w-full appearance-none rounded border-2 border-zinc-200 bg-zinc-200 px-4 py-2 leading-tight text-zinc-700 focus:border-purple-500 focus:bg-white focus:outline-none"
           type={type}
           name={name}
           {...props}

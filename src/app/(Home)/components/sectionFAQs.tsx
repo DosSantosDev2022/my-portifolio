@@ -4,11 +4,11 @@ import Button from '@/components/Buttons/Button'
 
 export function SectionFAQs() {
   return (
-    <section className="py-28 flex flex-col lg:flex-row items-start gap-20">
-      <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-20 lg:p-10">
+    <section className="flex flex-col items-start gap-20 py-28 lg:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-20 lg:flex-row lg:p-10">
         <div className="flex flex-col items-start justify-center gap-2  ">
-          <h5 className="text-zinc-50 font-bold text-7xl">FAQS</h5>
-          <p className="text-zinc-100 font-normal text-2xl">
+          <h5 className="text-7xl font-bold text-zinc-50">FAQS</h5>
+          <p className="text-2xl font-normal text-zinc-100">
             Dúvidas? Consulte Nosso FAQ: Seu Mapa para Soluções Rápidas e
             Descomplicadas.
           </p>

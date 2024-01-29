@@ -15,24 +15,24 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="flex items-center justify-between w-full  bg-zinc-950 lg:h-[95px] lg:px-16 px-8 border-b-[1px] border-zinc-500 lg:fixed top-0 left-0 z-[1000] ">
-      <div className="flex flex-col lg:flex-row items-center w-full justify-between p-5 lg:p-0">
+    <header className="left-0 top-0 z-[1000] flex  w-full items-center justify-between border-b-[1px] border-zinc-500 bg-zinc-950 px-8 lg:fixed lg:h-[95px] lg:px-16 ">
+      <div className="flex w-full flex-col items-center justify-between p-5 lg:flex-row lg:p-0">
         <div className="flex items-center gap-28">
-          <h1 className="text-slate-50 text-2xl font-bold">DosSantosDev</h1>
+          <h1 className="text-2xl font-bold text-slate-50">DosSantosDev</h1>
           <Button onClick={toggleMenu} className="lg:hidden">
             <HiBars3BottomRight />
           </Button>
         </div>
 
         <div
-          className={`lg:flex flex-col lg:flex-row items-center gap-5 mt-10 lg:mt-0  ${
+          className={`mt-10 flex-col items-center gap-5 lg:mt-0 lg:flex lg:flex-row  ${
             isMenuOpen ? 'flex' : 'hidden'
           }`}
         >
           <NavMenu />
           <div className="flex items-center justify-center gap-4 ">
             <Link
-              className="text-zinc-50 text-3xl hover:text-violet-800 duration-500 transition-all"
+              className="text-3xl text-zinc-50 transition-all duration-500 hover:text-violet-800"
               target="_blank"
               href={'https://github.com/DosSantosDev2022'}
             >
@@ -40,7 +40,7 @@ export function Header() {
             </Link>
 
             <Link
-              className="text-zinc-50 text-3xl hover:text-violet-800 duration-500 transition-all"
+              className="text-3xl text-zinc-50 transition-all duration-500 hover:text-violet-800"
               target="_blank"
               href={'https://www.linkedin.com/in/juliano-santos-234bab257/'}
             >

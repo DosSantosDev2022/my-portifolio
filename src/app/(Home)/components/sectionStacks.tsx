@@ -7,10 +7,10 @@ type SectionStacksProps = {
 
 export function SectionStacks({ homeInfo }: SectionStacksProps) {
   return (
-    <section className="py-28 flex flex-col lg:flex-row items-start gap-20">
-      <div className="flex flex-col gap-20 w-full">
-        <div className="w-full flex items-center justify-center">
-          <h4 className="text-zinc-50 font-bold lg:text-6xl text-3xl text-center">
+    <section className="flex flex-col items-start gap-20 py-28 lg:flex-row">
+      <div className="flex w-full flex-col gap-20">
+        <div className="flex w-full items-center justify-center">
+          <h4 className="text-center text-3xl font-bold text-zinc-50 lg:text-6xl">
             {homeInfo.sectionStack.title}
           </h4>
         </div>

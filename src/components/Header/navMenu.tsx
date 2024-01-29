@@ -12,11 +12,11 @@ export function NavMenu() {
 
   return (
     <NavigationMenu.Root>
-      <NavigationMenu.List className="flex flex-col lg:flex-row items-center gap-10">
+      <NavigationMenu.List className="flex flex-col items-center gap-10 lg:flex-row">
         {links.map((link) => (
           <NavigationMenu.Item
             key={link.name}
-            className="text-zinc-50 font-light text-sm hover:bg-violet-900 p-1 rounded-sm transition-all duration-300"
+            className="rounded-sm p-1 text-sm font-light text-zinc-50 transition-all duration-300 hover:bg-violet-900"
           >
             <Link href={link.Url}>{link.name}</Link>
           </NavigationMenu.Item>

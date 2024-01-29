@@ -8,13 +8,13 @@ interface CardsServicesProps {
 export function CardsServices({ paragraph, title }: CardsServicesProps) {
   return (
     <>
-      <div className="flex items-start gap-2  w-full border-zinc-700 rounded-md p-2 bg-zinc-800 ">
-        <i className="text-violet-800 text-2xl">
+      <div className="flex w-full items-start  gap-2 rounded-md border-zinc-700 bg-zinc-800 p-2 ">
+        <i className="text-2xl text-violet-800">
           <FaCode />
         </i>
         <div className="flex flex-col items-start gap-1">
-          <h6 className="text-zinc-50 font-semibold">{title} </h6>
-          <p className="text-zinc-50 font-normal">{paragraph}</p>
+          <h6 className="font-semibold text-zinc-50">{title} </h6>
+          <p className="font-normal text-zinc-50">{paragraph}</p>
         </div>
       </div>
     </>
