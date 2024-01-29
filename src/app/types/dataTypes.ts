@@ -129,3 +129,9 @@ export type AboutPageData = {
 export type AboutPageInfo = {
   aboutPage: AboutPageData
 }
+
+export type ProjectPageStaticData = {
+  project: {
+    slug: string
+  }[]
+}

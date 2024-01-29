@@ -1,10 +1,12 @@
 import { GET_ALL_PROJECTS } from '@/app/api/Graphql/querys'
-import Image from 'next/image'
+
 import { RichText } from '@/components/Hygraph/richtext'
 
 import { ModalImage } from '@/components/modal/modalImage'
 import Button from '@/components/Buttons/Button'
 import Link from 'next/link'
+import { fetchHygraph } from '@/app/api/Hygraph/Hygraph-api'
+import { ProjectPageStaticData } from '@/app/types/dataTypes'
 
 export default async function ProjectPageDetails({
   params,
@@ -27,13 +29,12 @@ export default async function ProjectPageDetails({
   return (
     <div className="flex flex-col items-center justify-center py-28  gap-20">
       <div className="w-full lg:px-16">
-        <Image
-          className="w-full h-[450px] rounded-lg "
-          alt={projectDetail.title}
-          src={projectDetail.coverImage.url}
-          width={500}
-          height={500}
-          quality={100}
+        <div
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${projectDetail.coverImage.url})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         />
       </div>
       <div className="lg:w-[768px] w-full lg:py-20  py-10  space-y-16 ">
@@ -45,7 +46,7 @@ export default async function ProjectPageDetails({
             {projectDetail.description}
           </p>
           <div className="flex flex-col gap-3">
-            <span className="font-normal text-xl text-violet-700">
+            <span className="font-normal text-xl text-violet-500">
               Tecnologias ulitiladas
             </span>
             <div className="flex items-center justify-start flex-wrap gap-2">
@@ -92,4 +93,17 @@ export default async function ProjectPageDetails({
       </div>
     </div>
   )
+}
+
+export async function generateStaticParams() {
+  const query = `
+    query ProjectsSlug {
+      project (first : 2) {
+        slug
+      }
+    }
+  `
+
+  const { project } = await fetchHygraph<ProjectPageStaticData>(query)
+  return project
 }
