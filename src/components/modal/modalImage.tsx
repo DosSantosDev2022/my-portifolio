@@ -25,7 +25,14 @@ export function ModalImage({
   return (
     <Dialog>
       <DialogTrigger>
-        <Image alt="" src={coverImage} width={500} height={500} quality={100} />
+        <Image
+          className="rounded-md border w-full lg:h-[410px] hover:opacity-70 duration-500"
+          alt="Imagem de capa do projeto DashFreela"
+          src={coverImage}
+          width={500}
+          height={500}
+          quality={100}
+        />
       </DialogTrigger>
       <DialogContent>
         {/*  <DialogTitle>{projectName} </DialogTitle> */}
@@ -33,7 +40,7 @@ export function ModalImage({
           <CarouselContent>
             <CarouselItem>
               <Image
-                className="w-full h-[480px] rounded-md "
+                className="w-full lg:h-[480px] rounded-md "
                 alt=""
                 src={img01}
                 width={500}
@@ -43,7 +50,7 @@ export function ModalImage({
             </CarouselItem>
             <CarouselItem>
               <Image
-                className="w-full h-[480px] rounded-md "
+                className="w-full lg:h-[480px] rounded-md "
                 alt=""
                 src={img02}
                 width={500}
@@ -53,7 +60,7 @@ export function ModalImage({
             </CarouselItem>
             <CarouselItem>
               <Image
-                className="w-full h-[480px] rounded-md "
+                className="w-full lg:h-[480px] rounded-md "
                 alt=""
                 src={img03}
                 width={500}
