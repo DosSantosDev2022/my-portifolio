@@ -27,16 +27,16 @@ export default async function ProjectPageDetails({
     )
   }
   return (
-    <div className="flex flex-col items-center justify-center py-28  gap-20">
-      <div className="w-full lg:px-16">
+    <div className="flex flex-col items-center justify-center py-28 gap-20 ">
+      <div className="w-full lg:h-[450px] h-[200px] relative">
         <div
+          className="absolute inset-0 z-[-1]  "
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${projectDetail.coverImage.url})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: `url(${projectDetail.coverImage.url}) no-repeat center/cover `,
           }}
         />
       </div>
+
       <div className="lg:w-[768px] w-full lg:py-20  py-10  space-y-16 ">
         <div className="flex flex-col gap-6 ">
           <h2 className="text-zinc-50 font-bold text-6xl">

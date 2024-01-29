@@ -9,7 +9,7 @@ export default function ContactPage() {
       <div className="w-full flex items-start justify-between">
         <div className="w-full space-y-2">
           <h4 className="text-zinc-50 font-extrabold text-5xl">
-            Entre em cotato
+            Entre em contato
           </h4>
           <p className="text-violet-900  font-medium- text-xl">
             Vamos fechar uma parceria ?
