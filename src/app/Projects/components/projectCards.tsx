@@ -23,10 +23,10 @@ export function ProjectCards({
   slug,
 }: ProjectCardsProps) {
   return (
-    <Card className="lg:w-[350px] h-[430px] w-full ">
+    <Card className="h-[27rem] w-full  space-y-2 overflow-hidden rounded-md  shadow-md lg:w-[21rem] ">
       <CardHeader>
         <Image
-          className=" w-full"
+          className=" w-full rounded-sm"
           alt="Imagem descritiva do projeto"
           src={coverImage}
           width={250}
@@ -36,15 +36,15 @@ export function ProjectCards({
       <CardContent>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
+        <CardFooter className="flex items-center">
+          <Link
+            className="rounded-md bg-violet-900 p-2 text-sm text-zinc-50 transition-all duration-500 hover:bg-violet-700"
+            href={`/Project/${slug}`}
+          >
+            Ver mais
+          </Link>
+        </CardFooter>
       </CardContent>
-      <CardFooter className="p-3 flex items-center">
-        <Link
-          className="bg-violet-900 p-2 rounded-md text-sm text-zinc-50 hover:bg-violet-700 transition-all duration-500"
-          href={`/Project/${slug}`}
-        >
-          Ver mais
-        </Link>
-      </CardFooter>
     </Card>
   )
 }
