@@ -55,8 +55,13 @@ export const GET_ALL_DATA = async (): Promise<HomePageData> => {
           }
         }
       }
+      faQ {
+        id
+        title
+        content
+      }
     }
-  }
+   }
   `
   return fetchHygraph(query)
 }

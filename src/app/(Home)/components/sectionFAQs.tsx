@@ -2,8 +2,15 @@ import Link from 'next/link'
 import { AccordionComponent } from './accordion'
 import Button from '@/components/Buttons/Button'
 import { AnimateDiv } from '@/components/animate/animateDiv'
+import { HomePageInfo } from '@/app/types/dataTypes'
 
-export function SectionFAQs() {
+type SectionFAQsProps = {
+  homeInfo: HomePageInfo
+}
+
+export function SectionFAQs({ homeInfo }: SectionFAQsProps) {
+  const FaQs = homeInfo.faQ
+
   return (
     <section className="flex flex-col items-start gap-20 py-28 lg:flex-row">
       <div className="flex w-full flex-col items-start justify-between gap-20 lg:flex-row lg:p-10">
@@ -30,7 +37,7 @@ export function SectionFAQs() {
           transition={{ duration: 0.5 }}
           className="w-full "
         >
-          <AccordionComponent />
+          <AccordionComponent data={FaQs} />
         </AnimateDiv>
       </div>
     </section>

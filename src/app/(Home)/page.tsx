@@ -18,7 +18,7 @@ export default async function Home() {
       <SectionTwo homeInfo={homepage} />
       <SectionStacks homeInfo={homepage} />
       <HighlightedProjects data={project} />
-      <SectionFAQs />
+      <SectionFAQs homeInfo={homepage} />
     </>
   )
 }

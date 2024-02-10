@@ -30,6 +30,12 @@ export type Technology = {
   name: string
 }
 
+export type FaQs = {
+  title: string
+  content: string
+  id: string
+}
+
 export type HomePageInfo = {
   slug: string
   title: string
@@ -59,6 +65,7 @@ export type HomePageInfo = {
     title: string
     card: Card[]
   }
+  faQ: FaQs[]
 }
 
 export type HomePageData = {
