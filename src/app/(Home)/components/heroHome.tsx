@@ -1,10 +1,9 @@
 import { HomePageInfo } from '@/app/types/dataTypes'
-
 import { RichText } from '@/components/Hygraph/richtext'
-import { AnimateLink } from '@/components/animate/animateLink'
 import { AnimateDiv } from '@/components/animate/animateDiv'
-
 import Image from 'next/image'
+import Button from '@/components/Buttons/Button'
+import Link from 'next/link'
 
 type HeroHomePageProps = {
   homeInfo: HomePageInfo
@@ -30,18 +29,19 @@ export function HeroHomePage({ homeInfo }: HeroHomePageProps) {
         </div>
         <div className="flex items-center gap-2">
           {homeInfo.socials?.map((link, i) => (
-            <AnimateLink
+            <AnimateDiv
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
               transition={{ duration: 0.2, delay: i * 0.1 }}
-              className="rounded-md bg-zinc-50 p-2 text-zinc-900 transition-all duration-500 hover:scale-105 hover:bg-zinc-100"
-              target="_blank"
-              href={link.url}
               key={link.id}
             >
-              {link.name}
-            </AnimateLink>
+              <Button>
+                <Link target="_blank" href={link.url}>
+                  {link.name}
+                </Link>
+              </Button>
+            </AnimateDiv>
           ))}
         </div>
       </AnimateDiv>
