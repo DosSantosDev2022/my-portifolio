@@ -23,9 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.className} lang="pt-br">
-      <body className="bg-zinc-900 scrollbar scrollbar-thumb-zinc-950">
+      <body className="bg-zinc-950 scrollbar scrollbar-thumb-zinc-900">
         <Header />
-        <main className="px-6 lg:px-16">{children}</main>
+        <main className="mx-auto w-full">{children}</main>
         <FooterPageLayout />
         <ToastContainer
           position="top-right"

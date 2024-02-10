@@ -18,7 +18,9 @@ export function NavMenu() {
             key={link.name}
             className="rounded-sm p-1 text-sm font-light text-zinc-50 transition-all duration-300 hover:bg-violet-900"
           >
-            <Link href={link.Url}>{link.name}</Link>
+            <Link className="text-xl lg:text-base" href={link.Url}>
+              {link.name}
+            </Link>
           </NavigationMenu.Item>
         ))}
       </NavigationMenu.List>

@@ -7,13 +7,11 @@ import { GET_DATA_ABOUT_PAGE } from '../api/Graphql/querys'
 export default async function AboutPage() {
   const { aboutPage } = await GET_DATA_ABOUT_PAGE()
   return (
-    <>
-      <>
-        <HeaderContactPage data={aboutPage} />
-        <ProfileContactPage data={aboutPage} />
-        <SectionTechnology />
-        <SectionValues data={aboutPage} />
-      </>
-    </>
+    <div className="px-6 lg:px-16">
+      <HeaderContactPage data={aboutPage} />
+      <ProfileContactPage data={aboutPage} />
+      <SectionTechnology />
+      <SectionValues data={aboutPage} />
+    </div>
   )
 }

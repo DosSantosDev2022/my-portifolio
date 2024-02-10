@@ -12,13 +12,13 @@ export default async function Home() {
   const { project } = await GET_ALL_PROJECTS()
 
   return (
-    <>
+    <div className="px-6 lg:px-16">
       <HeroHomePage homeInfo={homepage} />
       <SectionOne homeInfo={homepage} />
       <SectionTwo homeInfo={homepage} />
       <SectionStacks homeInfo={homepage} />
       <HighlightedProjects data={project} />
       <SectionFAQs homeInfo={homepage} />
-    </>
+    </div>
   )
 }

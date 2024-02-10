@@ -10,19 +10,28 @@ type ProfileContactPageProps = {
 
 export function ProfileContactPage({ data }: ProfileContactPageProps) {
   const cards = data.sectionThree.card
+  const backgroundImageStyle = {
+    backgroundImage: `url('${data.sectionTwo.image.url}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }
   return (
-    <section className="space-y-20 py-28">
-      <div className="flex flex-col gap-12 lg:flex-row">
+    <section className="space-y-20 py-28 ">
+      <div
+        className="flex flex-col gap-12  lg:flex-row "
+        style={backgroundImageStyle}
+      >
         <div className="flex w-full">
-          <h3 className="text-3xl font-bold text-zinc-50 lg:text-5xl">
+          <h3 className="p-2 text-3xl font-bold text-zinc-50 lg:text-5xl">
             {data.sectionTwo.title}
           </h3>
         </div>
-        <div className="w-full space-y-4">
+        <div className="w-full space-y-4 p-2">
           <RichText content={data.sectionTwo.content.raw} />
         </div>
       </div>
-      <div className="flex flex-col items-start justify-center gap-12 lg:flex-row">
+      <div className="flex flex-col items-start justify-center gap-12  lg:flex-row ">
         <div className="flex w-full flex-col space-y-6">
           <h4 className="text-3xl font-bold text-zinc-50">
             {data.sectionThree.title}

@@ -73,9 +73,7 @@ export function Form() {
           placeholder="Deixe sua mensagem"
           {...register('coments')}
         />
-        <Button variant="highlight" className="hover:bg-violet-800 ">
-          Enviar
-        </Button>
+        <Button variant="highlight">Enviar</Button>
       </form>
     </>
   )

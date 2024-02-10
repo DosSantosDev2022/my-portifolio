@@ -10,7 +10,7 @@ export function SectionValues({ data }: SectionValuesProps) {
 
   return (
     <section className="flex flex-col items-center justify-center gap-20 py-28">
-      <div className="flex w-full flex-col items-center justify-center gap-6 lg:w-[768px]">
+      <div className="flex w-full flex-col items-center justify-center gap-6  lg:w-[768px] ">
         <h6 className="text-center text-4xl font-bold text-zinc-50">
           {data.sectionFour.title}
         </h6>

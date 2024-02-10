@@ -27,7 +27,7 @@ export default async function ProjectPageDetails({
     )
   }
   return (
-    <div className="flex flex-col items-center justify-center gap-20 py-28 ">
+    <div className="flex flex-col items-center justify-center gap-20 px-6 py-28 lg:px-16  ">
       <div className="relative h-[200px] w-full lg:h-[450px]">
         <div
           className="absolute inset-0 z-[-1]  "
@@ -52,7 +52,7 @@ export default async function ProjectPageDetails({
             <div className="flex flex-wrap items-center justify-start gap-2">
               {tech?.map((i) => (
                 <span
-                  className="rounded-md bg-zinc-950 p-2 text-zinc-50 shadow-md"
+                  className="rounded-md bg-zinc-900 p-2 text-zinc-50 shadow-md"
                   key={i.name}
                 >
                   {i.name}
