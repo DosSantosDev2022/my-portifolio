@@ -8,6 +8,7 @@ export const GET_ALL_DATA = async (): Promise<HomePageData> => {
       slug
       title
       technologies {
+        id
         name
         iconSvg
       }
@@ -78,7 +79,8 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
       coverImage {
         url
       }
-      technologies {
+      technologies (first : 25 ) {
+        id
         name
         iconSvg
       }

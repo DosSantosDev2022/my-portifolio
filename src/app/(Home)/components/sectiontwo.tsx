@@ -38,9 +38,8 @@ export function SectionTwo({ homeInfo }: SectionTwoProps) {
             key={card.title}
             className="flex items-start gap-6 self-stretch"
           >
-            <i className="rounded-md bg-violet-950  p-1 text-4xl text-zinc-50">
-              <CMSIcon icon={card.iconSvg} />
-            </i>
+            <CMSIcon className=" text-zinc-50" icon={card.iconSvg} />
+
             <div className="flex flex-col items-start justify-center gap-4">
               <h5 className="text-2xl font-bold text-zinc-50 ">{card.title}</h5>
               <div className="text-base font-normal text-zinc-100 ">

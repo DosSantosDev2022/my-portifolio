@@ -7,6 +7,7 @@ import Button from '@/components/Buttons/Button'
 import Link from 'next/link'
 import { fetchHygraph } from '@/app/api/Hygraph/Hygraph-api'
 import { ProjectPageStaticData } from '@/app/types/dataTypes'
+import { Technology } from '@/components/technology'
 
 export default async function ProjectPageDetails({
   params,
@@ -17,6 +18,7 @@ export default async function ProjectPageDetails({
 
   const projectDetail = project.find((p) => p.slug === params.slug)
   const tech = projectDetail?.technologies
+  console.log(tech)
   if (!projectDetail) {
     return (
       <div className="flex h-screen flex-col items-center justify-center gap-20 px-2 py-28">
@@ -51,12 +53,7 @@ export default async function ProjectPageDetails({
             </span>
             <div className="flex flex-wrap items-center justify-start gap-2">
               {tech?.map((i) => (
-                <span
-                  className="rounded-md bg-zinc-900 p-2 text-zinc-50 shadow-md"
-                  key={i.name}
-                >
-                  {i.name}
-                </span>
+                <Technology key={i.name} icon={i.iconSvg} name={i.name} />
               ))}
             </div>
           </div>

@@ -26,7 +26,7 @@ export type simpleCard = {
   }
 }
 export type Technology = {
-  iconSVG: string
+  iconSvg: string
   name: string
 }
 
