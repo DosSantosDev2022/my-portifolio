@@ -25,9 +25,18 @@ export function TechsList() {
 }
 
 export function SectionTechnology() {
+  const backgroundImageStyle = {
+    backgroundImage: `url('/bg-section-tecnologies.webp')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-6  py-20">
+      <div
+        className="flex flex-col items-center justify-center gap-6  py-20"
+        style={backgroundImageStyle}
+      >
         <h6 className="text-center text-3xl font-bold text-zinc-50 lg:text-4xl">
           As melhores tecnologias para seu projeto
         </h6>

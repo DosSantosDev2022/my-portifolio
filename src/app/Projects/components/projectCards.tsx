@@ -23,7 +23,7 @@ export function ProjectCards({
   slug,
 }: ProjectCardsProps) {
   return (
-    <Card className="h-[27rem] w-full  space-y-2 overflow-hidden rounded-md  shadow-md lg:w-[21rem] ">
+    <Card className=" w-[21rem] min-w-[21rem] max-w-[21rem] space-y-2  overflow-hidden rounded-md shadow-md">
       <CardHeader>
         <Image
           className=" w-full rounded-sm"

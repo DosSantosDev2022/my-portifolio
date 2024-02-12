@@ -23,6 +23,16 @@ export function PaginationComponent() {
               1
             </PaginationLink>
           </PaginationItem>
+          <PaginationItem>
+            <PaginationLink className="text-zinc-50" href="Projects/1">
+              2
+            </PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink className="text-zinc-50" href="Projects/1">
+              3
+            </PaginationLink>
+          </PaginationItem>
 
           <PaginationItem>
             <PaginationEllipsis className="text-zinc-50" />
