@@ -10,7 +10,6 @@ import { SectionTwo } from './components/sectiontwo'
 export default async function Home() {
   const { homepage } = await GET_ALL_DATA()
   const { project } = await GET_ALL_PROJECTS()
-
   return (
     <div className="px-6 lg:px-16">
       <HeroHomePage homeInfo={homepage} />

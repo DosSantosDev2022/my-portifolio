@@ -1,4 +1,5 @@
 import { Form } from '@/components/Forms/Form'
+import { AnimateDiv } from '@/components/animate/animateDiv'
 import { FaSquarePhone } from 'react-icons/fa6'
 import { HiMiniMapPin } from 'react-icons/hi2'
 import { MdEmail } from 'react-icons/md'
@@ -7,7 +8,13 @@ export default function ContactPage() {
   return (
     <section className="flex h-screen items-center justify-center px-28">
       <div className="flex w-full items-start justify-between">
-        <div className="w-full space-y-2">
+        <AnimateDiv
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+          className="w-full space-y-2"
+        >
           <h4 className="text-5xl font-extrabold text-zinc-50">
             Entre em contato
           </h4>
@@ -25,7 +32,7 @@ export default function ContactPage() {
               <HiMiniMapPin /> Itupeva - SP
             </span>
           </div>
-        </div>
+        </AnimateDiv>
         <Form />
       </div>
     </section>

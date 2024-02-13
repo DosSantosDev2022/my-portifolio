@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.className} lang="pt-br">
-      <body className="bg-zinc-950 scrollbar scrollbar-thumb-zinc-900">
+      <body className="overflow-x-hidden bg-zinc-950 scrollbar scrollbar-thumb-zinc-900">
         <Header />
         <main className="mx-auto w-full">{children}</main>
         <FooterPageLayout />

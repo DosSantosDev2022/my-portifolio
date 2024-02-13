@@ -1,5 +1,6 @@
 import { AboutPageData } from '@/app/types/dataTypes'
 import { CMSIcon } from '@/components/Hygraph/IconCms'
+import { AnimateDiv } from '@/components/animate/animateDiv'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 
 type SectionValuesProps = {
@@ -11,15 +12,27 @@ export function SectionValues({ data }: SectionValuesProps) {
 
   return (
     <section className=" flex flex-col items-center justify-center gap-20  py-28">
-      <div className="flex w-full flex-col items-center justify-center gap-6  lg:w-[768px] ">
+      <AnimateDiv
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ duration: 0.5 }}
+        className="flex w-full flex-col items-center justify-center gap-6  lg:w-[768px] "
+      >
         <h6 className="text-center text-4xl font-bold text-zinc-50">
           {data.sectionFour.title}
         </h6>
         <p className="text-center font-normal text-zinc-50">
           {data.sectionFour.rowText}
         </p>
-      </div>
-      <div className="flex flex-col items-center justify-center gap-6 lg:flex-row">
+      </AnimateDiv>
+      <AnimateDiv
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center justify-center gap-6 lg:flex-row"
+      >
         {cards.map((card) => (
           <Card
             className="flex h-[290px] w-full items-center p-2 lg:w-[390px] "
@@ -36,7 +49,7 @@ export function SectionValues({ data }: SectionValuesProps) {
             </CardContent>
           </Card>
         ))}
-      </div>
+      </AnimateDiv>
     </section>
   )
 }

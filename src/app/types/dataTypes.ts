@@ -97,6 +97,7 @@ export type ProjectInfoData = {
       url: string
     }
   }
+  destaque: boolean
 }
 
 export type Project = {

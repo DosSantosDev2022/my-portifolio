@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { CardsServices } from './cards'
 import { AboutPageData } from '@/app/types/dataTypes'
 import { RichText } from '@/components/Hygraph/richtext'
+import { AnimateDiv } from '@/components/animate/animateDiv'
 
 type ProfileAboutPageProps = {
   data: AboutPageData
@@ -22,17 +23,35 @@ export function ProfileAboutPage({ data }: ProfileAboutPageProps) {
         className="flex flex-col gap-12  lg:flex-row "
         style={backgroundImageStyle}
       >
-        <div className="flex w-full">
+        <AnimateDiv
+          className="flex w-full"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="p-2 text-3xl font-bold text-zinc-50 lg:text-5xl">
             {data.sectionTwo.title}
           </h3>
-        </div>
-        <div className="w-full space-y-4 p-2">
+        </AnimateDiv>
+        <AnimateDiv
+          className="w-full space-y-4 p-2"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5 }}
+        >
           <RichText content={data.sectionTwo.content.raw} />
-        </div>
+        </AnimateDiv>
       </div>
       <div className="flex flex-col items-start justify-center gap-12  lg:flex-row ">
-        <div className="flex w-full flex-col space-y-6">
+        <AnimateDiv
+          className="flex w-full flex-col space-y-6"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+        >
           <h4 className="text-3xl font-bold text-zinc-50">
             {data.sectionThree.title}
           </h4>
@@ -40,16 +59,29 @@ export function ProfileAboutPage({ data }: ProfileAboutPageProps) {
             {data.sectionThree.rowText}
           </p>
           <div className="flex flex-col gap-2">
-            {cards.map((card) => (
-              <CardsServices
+            {cards.map((card, i) => (
+              <AnimateDiv
                 key={card.id}
-                paragraph={card.content.text}
-                title={card.title}
-              />
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.2 }}
+              >
+                <CardsServices
+                  paragraph={card.content.text}
+                  title={card.title}
+                />
+              </AnimateDiv>
             ))}
           </div>
-        </div>
-        <div className="flex w-full items-start justify-center">
+        </AnimateDiv>
+        <AnimateDiv
+          className="flex w-full items-start justify-center"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5 }}
+        >
           <Image
             alt="Juliano Santos"
             src={data.sectionThree.figure.url}
@@ -58,7 +90,7 @@ export function ProfileAboutPage({ data }: ProfileAboutPageProps) {
             quality={100}
             className="rounded-md"
           />
-        </div>
+        </AnimateDiv>
       </div>
     </section>
   )

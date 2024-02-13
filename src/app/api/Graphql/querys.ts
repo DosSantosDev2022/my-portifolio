@@ -79,7 +79,7 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
       coverImage {
         url
       }
-      technologies (first : 25 ) {
+      technologies(first: 25) {
         id
         name
         iconSvg
@@ -98,6 +98,7 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
           url
         }
       }
+      destaque
     }
   }
   `

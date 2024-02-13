@@ -1,5 +1,6 @@
 import { CMSIcon } from '@/components/Hygraph/IconCms'
 import { AboutPageData } from '@/app/types/dataTypes'
+import { AnimateDiv } from '@/components/animate/animateDiv'
 
 type TechsListProps = {
   data: AboutPageData
@@ -12,7 +13,7 @@ export function TechsList({ data }: TechsListProps) {
     <div className="flex w-full flex-wrap items-start justify-center gap-12 p-2">
       {techlist.map((item) => (
         <span
-          className="text-md flex  items-center justify-center gap-2  rounded-md bg-zinc-700 p-2 text-center font-bold text-zinc-50 "
+          className=" text-md flex   items-center justify-center gap-2  rounded-md bg-zinc-700 p-2 text-center font-bold text-zinc-50 "
           key={item.id}
         >
           <CMSIcon icon={item.iconSvg} />
@@ -36,7 +37,11 @@ export function SectionTechnology({ data }: SectionTechnologyProps) {
   }
   return (
     <>
-      <div
+      <AnimateDiv
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ duration: 0.4 }}
         className="flex flex-col items-center justify-center gap-6 py-20 "
         style={backgroundImageStyle}
       >
@@ -44,7 +49,7 @@ export function SectionTechnology({ data }: SectionTechnologyProps) {
           As melhores tecnologias para seu projeto
         </h6>
         <TechsList data={data} />
-      </div>
+      </AnimateDiv>
     </>
   )
 }

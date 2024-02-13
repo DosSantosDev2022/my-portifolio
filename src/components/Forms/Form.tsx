@@ -7,6 +7,7 @@ import Button from '@/components/Buttons/Button'
 import { Input } from './TextField'
 import { TextArea } from './TextArea'
 import { toast } from 'react-toastify'
+import { AnimateDiv } from '../animate/animateDiv'
 
 const zodSchemaFomr = z.object({
   name: z.string().nonempty('O nome é obrigatório'),
@@ -41,7 +42,13 @@ export function Form() {
   }
 
   return (
-    <>
+    <AnimateDiv
+      className="w-full"
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ duration: 0.5 }}
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-4"
@@ -75,6 +82,6 @@ export function Form() {
         />
         <Button variant="highlight">Enviar</Button>
       </form>
-    </>
+    </AnimateDiv>
   )
 }

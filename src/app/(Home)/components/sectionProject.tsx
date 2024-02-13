@@ -24,22 +24,24 @@ export function HighlightedProjects({ data }: HighlightedProjectsProps) {
           </h4>
         </AnimateDiv>
         <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
-          {data.map((p, i) => (
-            <AnimateDiv
-              key={p.title}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-            >
-              <ProjectCards
-                title={p.title}
-                coverImage={p.coverImage.url}
-                description={p.description}
-                slug={p.slug}
-              />
-            </AnimateDiv>
-          ))}
+          {data
+            .filter((p) => p.destaque)
+            .map((p, i) => (
+              <AnimateDiv
+                key={p.title}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+              >
+                <ProjectCards
+                  title={p.title}
+                  coverImage={p.coverImage.url}
+                  description={p.description}
+                  slug={p.slug}
+                />
+              </AnimateDiv>
+            ))}
         </div>
 
         <div className="flex w-full items-start justify-center">

@@ -18,7 +18,7 @@ export default async function ProjectPageDetails({
 
   const projectDetail = project.find((p) => p.slug === params.slug)
   const tech = projectDetail?.technologies
-  console.log(tech)
+
   if (!projectDetail) {
     return (
       <div className="flex h-screen flex-col items-center justify-center gap-20 px-2 py-28">
