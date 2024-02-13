@@ -4,11 +4,11 @@ import { CardsServices } from './cards'
 import { AboutPageData } from '@/app/types/dataTypes'
 import { RichText } from '@/components/Hygraph/richtext'
 
-type ProfileContactPageProps = {
+type ProfileAboutPageProps = {
   data: AboutPageData
 }
 
-export function ProfileContactPage({ data }: ProfileContactPageProps) {
+export function ProfileAboutPage({ data }: ProfileAboutPageProps) {
   const cards = data.sectionThree.card
   const backgroundImageStyle = {
     backgroundImage: `url('${data.sectionTwo.image.url}')`,
@@ -17,7 +17,7 @@ export function ProfileContactPage({ data }: ProfileContactPageProps) {
     backgroundRepeat: 'no-repeat',
   }
   return (
-    <section className="space-y-20 py-28 ">
+    <section className="space-y-20 pb-28 ">
       <div
         className="flex flex-col gap-12  lg:flex-row "
         style={backgroundImageStyle}

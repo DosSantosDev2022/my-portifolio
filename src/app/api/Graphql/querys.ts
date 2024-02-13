@@ -106,52 +106,57 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
 
 export const GET_DATA_ABOUT_PAGE = async (): Promise<AboutPageInfo> => {
   const query = `
-    query AboutPage {
-      aboutPage(where: {slug: "about"}) {
-        sectionOne {
-          title
-          image {
-            url
-          }
+  query AboutPage {
+    aboutPage(where: {slug: "about"}) {
+      sectionOne {
+        title
+        image {
+          url
         }
-        sectionTwo {
+      }
+      sectionTwo {
+        title
+        content {
+          raw
+        }
+        image {
+          url
+        }
+      }
+      sectionThree {
+        title
+        rowText
+        figure {
+          url
+        }
+        card {
           title
+          iconSvg
           content {
-            raw
+            text
           }
-          image {
-            url
-          }
+          id
         }
-        sectionThree {
+      }
+      sectionFour {
+        title
+        rowText
+        card {
           title
-          rowText
-          figure {
-            url
-          }
-          card {
-            title
-            iconSvg
-            content {
-              text
-            }
-            id
-          }
-        }
-        sectionFour {
-          title
-          rowText
-          card {
-            title
-            id
-            iconSvg
-            content {
-              text
-            }
+          id
+          iconSvg
+          content {
+            text
           }
         }
       }
+      technologies {
+        name
+        id
+        iconSvg
+      }
     }
+  }
   
   `
   return fetchHygraph(query)

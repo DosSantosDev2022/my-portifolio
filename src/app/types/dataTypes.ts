@@ -28,6 +28,7 @@ export type simpleCard = {
 export type Technology = {
   iconSvg: string
   name: string
+  id: string
 }
 
 export type FaQs = {
@@ -118,6 +119,7 @@ export type AboutPageData = {
       url: string
     }
   }
+  technologies: Technology[]
   sectionThree: {
     title: string
     rowText: string

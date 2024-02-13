@@ -1,11 +1,11 @@
 import { AboutPageData } from '@/app/types/dataTypes'
 import Image from 'next/image'
 
-type HeaderContactPageProps = {
+type HeroContactPageProps = {
   data: AboutPageData
 }
 
-export function HeaderContactPage({ data }: HeaderContactPageProps) {
+export function HeroAboutPage({ data }: HeroContactPageProps) {
   return (
     <section className="flex items-center justify-center px-2 py-28">
       <div className="flex flex-col items-start justify-center gap-12  lg:flex-row">

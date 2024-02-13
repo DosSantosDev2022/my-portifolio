@@ -11,7 +11,7 @@ export default function ContactPage() {
           <h4 className="text-5xl font-extrabold text-zinc-50">
             Entre em contato
           </h4>
-          <p className="font-medium-  text-xl text-violet-900">
+          <p className="text-xl  font-medium text-violet-900">
             Vamos fechar uma parceria ?
           </p>
           <div className="flex flex-col items-start justify-center gap-2">
